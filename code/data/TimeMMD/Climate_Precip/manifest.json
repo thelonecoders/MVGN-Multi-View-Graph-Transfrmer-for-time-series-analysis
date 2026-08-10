@@ -1,0 +1,47 @@
+{
+  "domain": "Climate_Precip",
+  "config": "us_precipitation_month_predLen_12",
+  "frequency": "monthly",
+  "variables": 1,
+  "description": "US precipitation index \u2014 Climate domain, 12-month horizon",
+  "text_coverage": "real NOAA text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Climate_Precip/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_precipitation_month_predLen_12/train.jsonl",
+      "status": "OK",
+      "bytes": 1583727,
+      "expected_bytes": null,
+      "sha256": "dea85e0522dd1b87a541ba0279fbe81dc0b9dfe8095274e6f829e722b25de2f0",
+      "lfs_oid": null,
+      "records": 320
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Climate_Precip/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_precipitation_month_predLen_12/validation.jsonl",
+      "status": "OK",
+      "bytes": 293761,
+      "expected_bytes": null,
+      "sha256": "27ccabb1c738322521f8669093a9fa2727c87052612182cf6a96ad548af2d1a5",
+      "lfs_oid": null,
+      "records": 64
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Climate_Precip/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_precipitation_month_predLen_12/test.jsonl",
+      "status": "OK",
+      "bytes": 306945,
+      "expected_bytes": null,
+      "sha256": "89a640b2a249330b8585e5a363e03067082e993a164fd4fdaf2c5745a3a278f5",
+      "lfs_oid": null,
+      "records": 64
+    }
+  ],
+  "total_bytes": 2184433
+}

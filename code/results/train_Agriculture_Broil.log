@@ -1,0 +1,132 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Agriculture_Broil
+  US retail broiler composite price — Agriculture domain
+  frequency=monthly  lookback=8  horizon=12
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 320 samples
+  Val  : 64 samples
+  Test : 64 samples
+  Normalize: mean=148.71139526367188, std=18.133575439453125
+  Parameters: total=3,878,688  trainable=1,070,112 (27.59%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 50 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=50 iters, total=1000 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.9205 | val_MAE=2.6093 | val_RMSE=2.7167 | lr=2.00e-04 | 16.1s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch   2/100 | loss=0.8717 | val_MAE=2.3590 | val_RMSE=2.4719 | lr=4.00e-04 | 15.7s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch   3/100 | loss=0.7375 | val_MAE=1.7781 | val_RMSE=1.9050 | lr=6.00e-04 | 14.6s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch   4/100 | loss=0.5394 | val_MAE=1.0939 | val_RMSE=1.2398 | lr=8.00e-04 | 14.8s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch   5/100 | loss=0.5046 | val_MAE=0.8486 | val_RMSE=1.0074 | lr=1.00e-03 | 14.8s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.5834 | val_MAE=0.9411 | val_RMSE=1.0775 | lr=1.00e-03 | 14.6s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch   7/100 | loss=0.5599 | val_MAE=0.9974 | val_RMSE=1.1278 | lr=9.99e-04 | 14.0s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch   8/100 | loss=0.5335 | val_MAE=1.0489 | val_RMSE=1.1711 | lr=9.98e-04 | 16.1s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch   9/100 | loss=0.4784 | val_MAE=1.0060 | val_RMSE=1.1330 | lr=9.96e-04 | 14.7s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  10/100 | loss=0.4363 | val_MAE=0.9653 | val_RMSE=1.1004 | lr=9.93e-04 | 14.6s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/epoch_10.pt
+  Epoch  11/100 | loss=0.4294 | val_MAE=0.9048 | val_RMSE=1.0481 | lr=9.90e-04 | 14.8s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  12/100 | loss=0.4172 | val_MAE=0.8400 | val_RMSE=0.9940 | lr=9.87e-04 | 16.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch  13/100 | loss=0.3998 | val_MAE=0.8131 | val_RMSE=0.9703 | lr=9.83e-04 | 14.4s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch  14/100 | loss=0.3926 | val_MAE=0.8092 | val_RMSE=0.9714 | lr=9.78e-04 | 15.5s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch  15/100 | loss=0.3737 | val_MAE=0.7339 | val_RMSE=0.9047 | lr=9.73e-04 | 14.7s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/best.pt
+  Epoch  16/100 | loss=0.3830 | val_MAE=0.7465 | val_RMSE=0.9165 | lr=9.67e-04 | 14.0s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  17/100 | loss=0.3691 | val_MAE=0.7949 | val_RMSE=0.9579 | lr=9.61e-04 | 14.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  18/100 | loss=0.3672 | val_MAE=0.7758 | val_RMSE=0.9341 | lr=9.55e-04 | 14.3s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  19/100 | loss=0.3833 | val_MAE=0.7962 | val_RMSE=0.9510 | lr=9.47e-04 | 13.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  20/100 | loss=0.3710 | val_MAE=0.8588 | val_RMSE=1.0048 | lr=9.40e-04 | 14.7s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/epoch_20.pt
+  Epoch  21/100 | loss=0.3568 | val_MAE=0.8128 | val_RMSE=0.9632 | lr=9.32e-04 | 15.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  22/100 | loss=0.3373 | val_MAE=0.8049 | val_RMSE=0.9573 | lr=9.23e-04 | 15.2s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  23/100 | loss=0.3442 | val_MAE=0.8255 | val_RMSE=0.9789 | lr=9.14e-04 | 14.1s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  24/100 | loss=0.3407 | val_MAE=0.8009 | val_RMSE=0.9567 | lr=9.05e-04 | 14.1s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  25/100 | loss=0.3452 | val_MAE=0.8355 | val_RMSE=0.9839 | lr=8.95e-04 | 14.5s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  26/100 | loss=0.3348 | val_MAE=0.8065 | val_RMSE=0.9594 | lr=8.84e-04 | 15.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  27/100 | loss=0.3237 | val_MAE=0.7689 | val_RMSE=0.9338 | lr=8.73e-04 | 13.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  28/100 | loss=0.3348 | val_MAE=0.7850 | val_RMSE=0.9515 | lr=8.62e-04 | 15.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  29/100 | loss=0.3432 | val_MAE=0.8080 | val_RMSE=0.9676 | lr=8.51e-04 | 13.9s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  Epoch  30/100 | loss=0.3223 | val_MAE=0.8508 | val_RMSE=1.0093 | lr=8.39e-04 | 15.1s
+  [checkpoint] saved checkpoints/Agriculture_Broil/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Broil/epoch_30.pt
+  Early stopping at epoch 30 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=0.7339)
+
+  Final test metrics:
+    MAE: 0.7339
+    MSE: 0.8185
+    RMSE: 0.9047
+    WAPE: 29.8086
+    MAPE: 27.2900
+    sMAPE: 33.0209
+    R2: -2.0025
+
+  Metrics written to results/Agriculture_Broil/metrics.json
+  Total training time: 453.5s  (7.6 min)

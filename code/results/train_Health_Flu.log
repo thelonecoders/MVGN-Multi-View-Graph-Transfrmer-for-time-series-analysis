@@ -1,0 +1,213 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Health_Flu
+  US flu ratio (ILI ratio) — Health_US domain
+  frequency=weekly  lookback=36  horizon=24
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 896 samples
+  Val  : 224 samples
+  Test : 224 samples
+  Normalize: mean=1.5462985038757324, std=1.2254583835601807
+  Parameters: total=3,882,796  trainable=1,074,220 (27.67%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 140 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=140 iters, total=2800 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.8416 | val_MAE=0.9766 | val_RMSE=1.4747 | lr=2.00e-04 | 72.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch   2/100 | loss=0.7990 | val_MAE=0.9429 | val_RMSE=1.4663 | lr=4.00e-04 | 70.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch   3/100 | loss=0.6841 | val_MAE=0.9194 | val_RMSE=1.3989 | lr=6.00e-04 | 68.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch   4/100 | loss=0.5888 | val_MAE=0.8479 | val_RMSE=1.2638 | lr=8.00e-04 | 69.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch   5/100 | loss=0.6144 | val_MAE=0.8310 | val_RMSE=1.2596 | lr=1.00e-03 | 77.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.5704 | val_MAE=0.9955 | val_RMSE=1.4251 | lr=1.00e-03 | 68.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch   7/100 | loss=0.5845 | val_MAE=1.0986 | val_RMSE=1.5520 | lr=9.99e-04 | 67.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch   8/100 | loss=0.5585 | val_MAE=0.9115 | val_RMSE=1.3579 | lr=9.98e-04 | 67.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch   9/100 | loss=0.5377 | val_MAE=0.8594 | val_RMSE=1.2978 | lr=9.96e-04 | 68.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  10/100 | loss=0.5259 | val_MAE=0.8369 | val_RMSE=1.3127 | lr=9.93e-04 | 68.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_10.pt
+  Epoch  11/100 | loss=0.5106 | val_MAE=0.8712 | val_RMSE=1.3222 | lr=9.90e-04 | 67.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  12/100 | loss=0.4977 | val_MAE=0.9569 | val_RMSE=1.3965 | lr=9.87e-04 | 67.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  13/100 | loss=0.5026 | val_MAE=0.8981 | val_RMSE=1.3521 | lr=9.83e-04 | 71.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  14/100 | loss=0.4958 | val_MAE=0.8928 | val_RMSE=1.3455 | lr=9.78e-04 | 66.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  15/100 | loss=0.4695 | val_MAE=0.8424 | val_RMSE=1.2765 | lr=9.73e-04 | 67.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  16/100 | loss=0.4497 | val_MAE=0.9545 | val_RMSE=1.3631 | lr=9.67e-04 | 68.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  17/100 | loss=0.4541 | val_MAE=0.9467 | val_RMSE=1.3487 | lr=9.61e-04 | 68.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  18/100 | loss=0.4691 | val_MAE=0.8497 | val_RMSE=1.2877 | lr=9.55e-04 | 70.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  19/100 | loss=0.4506 | val_MAE=0.8059 | val_RMSE=1.2426 | lr=9.47e-04 | 85.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  20/100 | loss=0.4331 | val_MAE=0.8274 | val_RMSE=1.2645 | lr=9.40e-04 | 66.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_20.pt
+  Epoch  21/100 | loss=0.4475 | val_MAE=0.9513 | val_RMSE=1.3601 | lr=9.32e-04 | 66.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  22/100 | loss=0.4477 | val_MAE=0.9878 | val_RMSE=1.4064 | lr=9.23e-04 | 70.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  23/100 | loss=0.4356 | val_MAE=0.8262 | val_RMSE=1.2622 | lr=9.14e-04 | 69.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  24/100 | loss=0.4221 | val_MAE=0.8380 | val_RMSE=1.2822 | lr=9.05e-04 | 71.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  25/100 | loss=0.4353 | val_MAE=0.8217 | val_RMSE=1.2583 | lr=8.95e-04 | 71.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  26/100 | loss=0.4347 | val_MAE=0.8279 | val_RMSE=1.2573 | lr=8.84e-04 | 74.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  27/100 | loss=0.4206 | val_MAE=0.8498 | val_RMSE=1.2664 | lr=8.73e-04 | 66.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  28/100 | loss=0.4188 | val_MAE=0.8012 | val_RMSE=1.2412 | lr=8.62e-04 | 80.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  29/100 | loss=0.4208 | val_MAE=0.7825 | val_RMSE=1.2302 | lr=8.51e-04 | 68.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  30/100 | loss=0.4174 | val_MAE=0.7762 | val_RMSE=1.2194 | lr=8.39e-04 | 66.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_30.pt
+  Epoch  31/100 | loss=0.4008 | val_MAE=0.8541 | val_RMSE=1.2815 | lr=8.26e-04 | 70.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  32/100 | loss=0.4018 | val_MAE=0.8798 | val_RMSE=1.3149 | lr=8.14e-04 | 73.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  33/100 | loss=0.3844 | val_MAE=0.7782 | val_RMSE=1.2082 | lr=8.01e-04 | 71.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  34/100 | loss=0.3861 | val_MAE=0.7960 | val_RMSE=1.2234 | lr=7.87e-04 | 68.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  35/100 | loss=0.3864 | val_MAE=0.7965 | val_RMSE=1.2329 | lr=7.73e-04 | 73.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  36/100 | loss=0.3838 | val_MAE=0.8468 | val_RMSE=1.2752 | lr=7.59e-04 | 66.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  37/100 | loss=0.3762 | val_MAE=0.8524 | val_RMSE=1.2856 | lr=7.45e-04 | 67.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  38/100 | loss=0.3756 | val_MAE=0.7953 | val_RMSE=1.2229 | lr=7.31e-04 | 77.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  39/100 | loss=0.3788 | val_MAE=0.7814 | val_RMSE=1.2209 | lr=7.16e-04 | 75.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  40/100 | loss=0.3789 | val_MAE=0.7791 | val_RMSE=1.2145 | lr=7.01e-04 | 77.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_40.pt
+  Epoch  41/100 | loss=0.3784 | val_MAE=0.8035 | val_RMSE=1.2371 | lr=6.86e-04 | 80.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  42/100 | loss=0.3796 | val_MAE=0.8075 | val_RMSE=1.2585 | lr=6.70e-04 | 68.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  43/100 | loss=0.3847 | val_MAE=0.7687 | val_RMSE=1.2021 | lr=6.55e-04 | 66.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  44/100 | loss=0.3669 | val_MAE=0.7513 | val_RMSE=1.1855 | lr=6.39e-04 | 67.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  45/100 | loss=0.3607 | val_MAE=0.7735 | val_RMSE=1.1959 | lr=6.23e-04 | 66.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  46/100 | loss=0.3613 | val_MAE=0.7966 | val_RMSE=1.2248 | lr=6.07e-04 | 67.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  47/100 | loss=0.3640 | val_MAE=0.7931 | val_RMSE=1.2374 | lr=5.90e-04 | 67.6s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  48/100 | loss=0.3519 | val_MAE=0.7676 | val_RMSE=1.2051 | lr=5.74e-04 | 66.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  49/100 | loss=0.3534 | val_MAE=0.7568 | val_RMSE=1.1890 | lr=5.58e-04 | 67.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  50/100 | loss=0.3519 | val_MAE=0.7503 | val_RMSE=1.1806 | lr=5.41e-04 | 67.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_50.pt
+  Epoch  51/100 | loss=0.3470 | val_MAE=0.7798 | val_RMSE=1.2062 | lr=5.25e-04 | 81.5s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  52/100 | loss=0.3411 | val_MAE=0.7465 | val_RMSE=1.1678 | lr=5.08e-04 | 80.1s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/best.pt
+  Epoch  53/100 | loss=0.3433 | val_MAE=0.7726 | val_RMSE=1.1946 | lr=4.92e-04 | 65.7s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  54/100 | loss=0.3420 | val_MAE=0.7697 | val_RMSE=1.1988 | lr=4.75e-04 | 75.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  55/100 | loss=0.3398 | val_MAE=0.7593 | val_RMSE=1.1808 | lr=4.59e-04 | 74.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  56/100 | loss=0.3364 | val_MAE=0.7793 | val_RMSE=1.2121 | lr=4.42e-04 | 65.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  57/100 | loss=0.3358 | val_MAE=0.7795 | val_RMSE=1.2072 | lr=4.26e-04 | 67.0s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  58/100 | loss=0.3334 | val_MAE=0.7876 | val_RMSE=1.2091 | lr=4.10e-04 | 66.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  59/100 | loss=0.3381 | val_MAE=0.7710 | val_RMSE=1.1901 | lr=3.93e-04 | 93.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  60/100 | loss=0.3330 | val_MAE=0.7608 | val_RMSE=1.1787 | lr=3.77e-04 | 81.9s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  [checkpoint] saved checkpoints/Health_Flu/epoch_60.pt
+  Epoch  61/100 | loss=0.3317 | val_MAE=0.7805 | val_RMSE=1.2062 | lr=3.61e-04 | 66.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  62/100 | loss=0.3295 | val_MAE=0.7631 | val_RMSE=1.1766 | lr=3.45e-04 | 70.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  63/100 | loss=0.3265 | val_MAE=0.7590 | val_RMSE=1.1810 | lr=3.30e-04 | 71.2s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  64/100 | loss=0.3235 | val_MAE=0.7591 | val_RMSE=1.1749 | lr=3.14e-04 | 66.8s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  65/100 | loss=0.3292 | val_MAE=0.7617 | val_RMSE=1.1812 | lr=2.99e-04 | 67.2s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  66/100 | loss=0.3263 | val_MAE=0.7485 | val_RMSE=1.1573 | lr=2.84e-04 | 66.3s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Epoch  67/100 | loss=0.3243 | val_MAE=0.7519 | val_RMSE=1.1740 | lr=2.69e-04 | 67.4s
+  [checkpoint] saved checkpoints/Health_Flu/latest.pt
+  Early stopping at epoch 67 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=0.7465)
+
+  Final test metrics:
+    MAE: 0.7465
+    MSE: 1.3638
+    RMSE: 1.1678
+    WAPE: 86.6430
+    MAPE: 445.8263
+    sMAPE: 112.9358
+    R2: 0.1720
+
+  Metrics written to results/Health_Flu/metrics.json
+  Total training time: 4754.0s  (79.2 min)

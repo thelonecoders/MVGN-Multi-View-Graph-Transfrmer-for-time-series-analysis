@@ -1,0 +1,42 @@
+# Python virtualenv & caches (regenerated from requirements.txt)
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Heavy archives (uploaded via Releases, not pushed via git)
+*.tar.zst
+*.tar.gz
+*.zip
+
+# Experiment tracking (regenerated on re-training)
+wandb/
+mlruns/
+lightning_logs/
+
+# Non-best checkpoints (best.pt IS committed; epoch_*/last.pt are NOT)
+code/checkpoints_mitigated/**/epoch_*.pt
+code/checkpoints_mitigated/**/last.pt
+code/checkpoints_mitigated/**/latest.pt
+code/checkpoints_mitigated/**/checkpoint_*.pt
+code/checkpoints/**/epoch_*.pt
+code/checkpoints/**/last.pt
+code/checkpoints/**/latest.pt
+code/checkpoints/**/checkpoint_*.pt
+
+# Editor / OS junk
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# TimeMMD dataset files — too large for git (167 MB+ each)
+# These are preserved in the CLEAN archive (release asset) and can be
+# re-downloaded via dataset_downloader/download_timemmd_real.py
+code/data/**/*.jsonl
+code/data/**/*.parquet
+code/data/**/*.csv
+code/data/**/*.h5
+code/data/**/*.npz

@@ -1,0 +1,36 @@
+{
+  "domain": "Climate_AQI",
+  "step": "J_mitigated",
+  "checkpoint_path": "/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt",
+  "metrics_path": "/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3080 Ti",
+  "torch_version": "2.5.1+cu121",
+  "cuda_version": "12.1",
+  "batch_size": 8,
+  "n_warmup": 5,
+  "n_runs": 50,
+  "cold_start_s": 1.0899458229978336,
+  "params": {
+    "total": 3900532,
+    "trainable": 1091956,
+    "frozen": 2808576
+  },
+  "latency_us": {
+    "mean_us": 456996.05251982575,
+    "median_us": 449299.826999777,
+    "p50_us": 449299.826999777,
+    "p95_us": 529387.7170464839,
+    "p99_us": 553637.2217258031,
+    "min_us": 446600.99400789477,
+    "max_us": 555195.9719887236,
+    "std_us": 25267.41472059836,
+    "n_runs": 50,
+    "throughput_samples_per_sec": 17.505621669790983
+  },
+  "peak_gpu_memory_mb": 59.92138671875,
+  "best_val_mae_in_checkpoint": 0.09621798992156982,
+  "checkpoint_epoch": 14,
+  "data_source": "real_timemmd_test_split",
+  "timestamp_utc": "2026-08-10T12:49:02Z"
+}

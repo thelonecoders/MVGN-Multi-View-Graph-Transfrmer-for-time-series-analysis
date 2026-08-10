@@ -1,0 +1,30 @@
+[1/7] Loading checkpoint: checkpoints_mitigated/Climate_AQI/best.pt
+  Config from: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json
+  Epoch: 14, val_MAE: 0.09621798992156982
+[2/7] Building MVGTNet
+  State loaded from key: 'model_state'
+[3/7] Loading data via get_dataloaders
+  data_root: data/TimeMMD
+  Lookback=96, aggregating into 12 features (chunk_size=8)
+  Background: (25, 96, 1, 1)
+  Test:      (10, 96, 1, 1)
+[4/7] Creating model wrapper
+  Wrapper OK - output shape: (2, 96, 1, 1)
+[5/7] Building SHAP explainer
+  Aggregated shapes: bg=(25, 12), test=(10, 12)
+  PermutationExplainer (max_evals=25, valid for 12 features)
+PermutationExplainer explainer:  10%|█         | 1/10 [00:00<?, ?it/s]PermutationExplainer explainer:  30%|███       | 3/10 [01:26<02:47, 23.98s/it]PermutationExplainer explainer:  40%|████      | 4/10 [02:16<03:26, 34.47s/it]PermutationExplainer explainer:  50%|█████     | 5/10 [03:04<03:18, 39.70s/it]PermutationExplainer explainer:  60%|██████    | 6/10 [03:52<02:50, 42.55s/it]PermutationExplainer explainer:  70%|███████   | 7/10 [04:41<02:13, 44.64s/it]PermutationExplainer explainer:  80%|████████  | 8/10 [05:29<01:31, 45.84s/it]PermutationExplainer explainer:  90%|█████████ | 9/10 [06:17<00:46, 46.58s/it]PermutationExplainer explainer: 100%|██████████| 10/10 [07:08<00:00, 47.73s/it]PermutationExplainer explainer: 11it [07:56, 47.93s/it]                        PermutationExplainer explainer: 11it [07:56, 47.65s/it]
+  ✓ Got values via __call__()
+  SHAP values shape: (10, 12, 96)
+[6/7] Saving SHAP values
+  Saved: results_mitigated/Climate_AQI/shap/Climate_AQI_shap_values.npy
+[7/7] Feature importance + plots
+  Saved: results_mitigated/Climate_AQI/shap/Climate_AQI_feature_importance.json
+  Saved: results_mitigated/Climate_AQI/shap/Climate_AQI_shap_bar.png
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/run_shap_v3.py:272: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(sv_flat, test_agg, feature_names=feature_names, show=False)
+  WARN: summary plot failed: The shape of the shap_values matrix does not match the shape of the provided data matrix.
+
+============================================================
+SHAP analysis complete!
+============================================================

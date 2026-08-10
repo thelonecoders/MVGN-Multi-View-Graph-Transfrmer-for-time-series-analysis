@@ -1,0 +1,67 @@
+# pyproject.toml for MVGT-Net
+# Configures ruff (linting), mypy (type checking), and pytest.
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvgt-net"
+version = "0.1.0"
+description = "Multi-View Graph Transformer for multi-domain time-series forecasting (TimeMMD)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "MVGT-Net Project" }]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["data", "checkpoints", "logs", "results"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # function call in default argument (common in PyTorch)
+    "N803",  # argument name should be lowercase (math notation uses capitals)
+    "N806",  # variable in function should be lowercase (math notation)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["N802", "N803"]  # test function names can be CamelCase
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+no_strict_optional = true
+exclude = ["data/", "checkpoints/", "logs/", "results/"]
+
+[[tool.mypy.overrides]]
+module = ["torch.*", "transformers.*", "wandb.*", "ranger21.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-v --tb=short --strict-markers"
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gpu: marks tests that require GPU",
+]

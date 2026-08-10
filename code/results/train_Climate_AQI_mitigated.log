@@ -1,0 +1,9 @@
+usage: train_real.py [-h] [--config CONFIG] [--domain DOMAIN] [--all-domains]
+                     [--device DEVICE] [--epochs EPOCHS]
+                     [--batch-size BATCH_SIZE] [--lr LR] [--seed SEED]
+                     [--smoke-test] [--resume] [--data-root DATA_ROOT]
+                     [--checkpoint-dir CHECKPOINT_DIR]
+                     [--results-dir RESULTS_DIR] [--wandb]
+                     [--patience PATIENCE] [--warmup-iters WARMUP_ITERS]
+                     [--normalization {zscore,minmax}]
+train_real.py: error: unrecognized arguments: --output results/Climate_AQI_mitigated --max-epochs 100 --no-wandb

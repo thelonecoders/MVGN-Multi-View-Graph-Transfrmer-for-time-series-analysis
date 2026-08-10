@@ -1,0 +1,68 @@
+# MVGT-Net configuration for the Environment domain of TimeMMD.
+# TimeMMD Environment domain: daily frequency, 1 numeric variable (OT), text facts.
+# T_d = 1 (daily), T_w = 7 (weekly).
+#
+# To run: python scripts/train.py --config configs/environment.yaml
+
+model:
+  num_nodes: 14               # Number of monitoring stations
+  input_dim: 1                # Single OT variable
+  hidden_dim: 64
+  lookback: 96                # 96 days
+  horizon: 14                 # 14-day forecast
+  use_text: true
+  use_categorical: false
+  num_categories: 0
+  text_model: bert-base-uncased
+  graph_types: [spatial, temporal, semantic, adaptive]
+  topk: 8
+  num_heads: 4
+  frozen_layers: 6
+  unfrozen_layers: 2
+  lora_rank: 8
+  use_qlora: false
+  use_text_gen: false
+  dropout: 0.1
+
+training:
+  optimizer: ranger21          # Ranger21 as in ST-LLM+ paper
+  learning_rate: 0.001
+  batch_size: 32
+  max_epochs: 100              # Reduced from 500 for faster iteration
+  weight_decay: 0.0
+  warmup_epochs: 5
+  gradient_clip: 1.0
+  scheduler: cosine
+  early_stopping_patience: 15
+  mixed_precision: fp16        # Use fp16 for memory efficiency
+
+data:
+  domain: Environment
+  data_dir: ../../12_dataset/TimeMMD/Environment
+  train_ratio: 0.6
+  val_ratio: 0.2
+  test_ratio: 0.2
+  normalize: standard          # z-score normalization
+  text_max_length: 128
+
+loss:
+  task_names: [numeric, text]
+  history_length: 5
+  hidden_dim: 32
+
+evaluation:
+  metrics: [MAE, MSE, RMSE, WAPE, MAPE, sMAPE, R2]
+  save_predictions: true
+  save_attention: true
+
+hardware:
+  device: cuda                 # or cpu
+  num_workers: 4
+  pin_memory: true
+
+logging:
+  experiment_name: mvgtnet_environment
+  log_dir: ./logs
+  checkpoint_dir: ./checkpoints
+  wandb_project: mvgtnet-thesis
+  log_every_n_steps: 50

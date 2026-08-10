@@ -1,0 +1,47 @@
+{
+  "domain": "Economy_Trade",
+  "config": "us_tradebalance_month_predLen_12",
+  "frequency": "monthly",
+  "variables": 1,
+  "description": "US trade balance \u2014 Economy domain, 12-month horizon",
+  "text_coverage": "real BEA text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Economy_Trade/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_tradebalance_month_predLen_12/train.jsonl",
+      "status": "OK",
+      "bytes": 1179019,
+      "expected_bytes": null,
+      "sha256": "11d71686815b397f380c069da2e2a67a2bfd814a4e6fc773b85142aaeb2a1091",
+      "lfs_oid": null,
+      "records": 256
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Economy_Trade/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_tradebalance_month_predLen_12/validation.jsonl",
+      "status": "OK",
+      "bytes": 225247,
+      "expected_bytes": null,
+      "sha256": "aefa7c762ba04a0cb00273667c87981704ba7c6014b640d293e54bae0c1a5533",
+      "lfs_oid": null,
+      "records": 64
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Economy_Trade/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_tradebalance_month_predLen_12/test.jsonl",
+      "status": "OK",
+      "bytes": 237919,
+      "expected_bytes": null,
+      "sha256": "731f282d1dcf9635dc4385ace8dbaf320572e54f81dd18dea6e8ba302f14d670",
+      "lfs_oid": null,
+      "records": 64
+    }
+  ],
+  "total_bytes": 1642185
+}

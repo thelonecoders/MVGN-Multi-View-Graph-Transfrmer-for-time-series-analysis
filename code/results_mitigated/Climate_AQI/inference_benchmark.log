@@ -1,0 +1,28 @@
+2026-08-10 12:48:23,109 [INFO] === MVGT-Net Inference Benchmark (Climate_AQI, Step J) ===
+2026-08-10 12:48:23,109 [INFO] Bundle root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle
+2026-08-10 12:48:23,109 [INFO] code/ root:  /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code
+2026-08-10 12:48:23,109 [INFO] Metrics JSON: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json
+2026-08-10 12:48:23,109 [INFO] Checkpoint:   /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt
+2026-08-10 12:48:23,109 [INFO] Device: cuda
+2026-08-10 12:48:23,132 [INFO] GPU: NVIDIA GeForce RTX 3080 Ti
+2026-08-10 12:48:23,133 [INFO] CUDA: 12.1, PyTorch: 2.5.1+cu121
+2026-08-10 12:48:23,133 [INFO] Batch size: 8, warmup: 5, runs: 50
+2026-08-10 12:48:23,133 [INFO] Loaded model config: num_nodes=1, input_dim=1, hidden_dim=64, lookback=96, horizon=96
+2026-08-10 12:48:24,223 [INFO] Cold start (config + model build + checkpoint load): 1.090 s
+2026-08-10 12:48:24,223 [INFO] Checkpoint best_val_mae: 0.09621798992156982
+2026-08-10 12:48:24,223 [INFO] Checkpoint epoch: 14
+2026-08-10 12:48:24,224 [INFO] Parameters: total=3,900,532 trainable=1,091,956 frozen=2,808,576 (72.0% frozen)
+2026-08-10 12:48:24,224 [INFO] Loading real test samples via mvgt_net.data.get_dataloaders(domain='Climate_AQI', data_root=/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD)
+2026-08-10 12:48:36,647 [INFO]   test_size=2112 samples, lookback=96, horizon=96, frequency=daily
+2026-08-10 12:48:36,650 [INFO]   loaded batch: x_numeric shape=(8, 96, 1, 1)
+2026-08-10 12:48:36,787 [INFO] Sample batch x_numeric: shape=(8, 96, 1, 1), dtype=torch.float32
+2026-08-10 12:48:37,574 [INFO] Forward sanity OK: output['numeric'] shape=(8, 96, 1, 1)
+2026-08-10 12:49:02,706 [INFO] === Results ===
+2026-08-10 12:49:02,706 [INFO] Mean latency:  456996.1 us  (456.996 ms)
+2026-08-10 12:49:02,706 [INFO] p50 / p95 / p99: 449299.8 / 529387.7 / 553637.2 us
+2026-08-10 12:49:02,706 [INFO] min / max:      446601.0 / 555196.0 us
+2026-08-10 12:49:02,706 [INFO] Throughput:     17.51 samples/sec
+2026-08-10 12:49:02,706 [INFO] Peak GPU mem:  59.9 MB
+2026-08-10 12:49:02,706 [INFO] Cold start:    1.090 s
+2026-08-10 12:49:02,706 [INFO] Results JSON:  /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/inference_benchmark.json
+2026-08-10 12:49:02,706 [INFO] Log:           /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/inference_benchmark.log

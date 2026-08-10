@@ -1,0 +1,54 @@
+# Pre-commit hooks for the ST-LLM-Plus VPS Code Bundle.
+#
+# Install pre-commit:    pip install pre-commit
+# Install the hooks:     pre-commit install
+# Run on all files:      pre-commit run --all-files
+#
+# Hooks:
+#  - trailing-whitespace: removes trailing whitespace
+#  - end-of-file-fixer:   ensures files end with a newline
+#  - check-yaml:          validates YAML syntax
+#  - check-json:          validates JSON syntax
+#  - check-toml:          validates TOML syntax
+#  - check-shell:         validates shell script syntax
+#  - check-added-large-files: prevents files > 500 KB from being committed
+#                             (except the bundled dataset JSONLs)
+#  - ruff:                Python linter (replaces flake8 + isort)
+#  - ruff-format:         Python formatter (replaces black)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '^12_dataset/|^code/data/'
+      - id: end-of-file-fixer
+        exclude: '^12_dataset/|^code/data/'
+      - id: check-yaml
+        files: '^code/configs/.*\.ya?ml$'
+      - id: check-json
+        files: '\.json$'
+        exclude: '^code/results/|^code/data/'
+      - id: check-toml
+        files: 'pyproject\.toml$'
+      - id: check-shell
+        files: '\.sh$'
+      - id: check-added-large-files
+        args: ['--maxkb=500']
+        exclude: |
+          (?x)^(
+            12_dataset/TimeMMD/.*\.jsonl|
+            code/data/.*\.jsonl|
+            02_source_paper/.*\.pdf|
+            01_final_deliverables/.*\.pdf|
+            07_fonts/.*\.ttf
+          )$
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+        files: '^code/(mvgt_net|scripts|tests)/.*\.py$'
+      - id: ruff-format
+        files: '^code/(mvgt_net|scripts|tests)/.*\.py$'

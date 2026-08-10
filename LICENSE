@@ -1,0 +1,95 @@
+# ST-LLM+ Thesis Bundle — License
+
+This bundle contains multiple components, each with its own license. The
+component-level licenses take precedence over any general statement in this
+file. Where a component does not declare its own license, the bundle-level
+license below applies.
+
+## 1. Bundle-level license (code + scripts + diagrams + documentation)
+
+    ST-LLM+ Thesis Bundle
+    Copyright (c) 2026 ST-LLM-Plus Thesis Bundle Authors
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+A full copy of the Apache License, Version 2.0 is available at
+http://www.apache.org/licenses/LICENSE-2.0.
+
+## 2. Source paper (02_source_paper/)
+
+The IEEE TKDE 2025 paper "ST-LLM+: Graph Enhanced Spatio-Temporal Large
+Language Models for Traffic Prediction" by Liu et al. is © IEEE and is
+included in `02_source_paper/TKDE Popular Paper.pdf` strictly for academic,
+non-commercial, educational, and research use under IEEE's personal-use
+policy. All rights in the paper itself remain with IEEE and the original
+authors. Any redistribution of the paper beyond personal academic use
+requires separate permission from IEEE.
+
+## 3. TimeMMD dataset (12_dataset/)
+
+The TimeMMD dataset (Liu et al., NeurIPS 2024 Datasets and Benchmarks Track,
+arXiv:2406.08627) is distributed under the **Open Data Commons Attribution
+License v1.0 (ODC-By v1.0)**. See:
+https://opendatacommons.org/licenses/by/1-0/
+
+The dataset was obtained from the Hugging Face mirror
+`AndrewRWilliams/time-mmd-DC`, which redistributes the official AdityaLab
+TimeMMD data. Upstream repo: https://github.com/AdityaLab/TimeMMD
+(as of 2026-08-09 the upstream repo returns HTTP 404).
+
+Under ODC-By v1.0 you are free to: share, create, and adapt the dataset,
+provided you attribute the source. The recommended attribution is:
+
+> Liu, H., Xu, S., Zhao, Z., Kong, L., Kamarthi, H., Sasanur, A. B.,
+> Sharma, M., Cui, J., Wen, Q., Zhang, C., & Prakash, B. A. (2024).
+> Time-MMD: A New Multi-Domain Multimodal Dataset for Time Series Analysis.
+> NeurIPS 2024 Datasets and Benchmarks Track. arXiv:2406.08627.
+
+## 4. BERT-base-uncased weights
+
+The `bert-base-uncased` model (used as the text encoder, downloaded at runtime
+from https://huggingface.co/google-bert/bert-base-uncased) is licensed under
+the Apache License, Version 2.0 by Google. See:
+https://huggingface.co/google-bert/bert-base-uncased/blob/main/LICENSE
+
+## 5. Persian fonts (07_fonts/)
+
+- **Vazirmatn** (by Saber Rastikerdar): licensed under the SIL Open Font
+  License 1.1. See https://github.com/rastikerdar/vazirmatn
+- **Sahel** (by Saber Rastikerdar): licensed under the SIL Open Font
+  License 1.1. See https://github.com/rastikerdar/sahel-font
+
+## 6. Thesis reports (01_final_deliverables/)
+
+The Persian and English thesis reports (DOCX + PDF) are © 2026 the thesis
+author, licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0). See: https://creativecommons.org/licenses/by/4.0/
+
+## 7. Third-party Python packages
+
+Each Python package listed in `10_mvgtnet_code/requirements.txt` retains its
+own license. The bundle does not modify or relicense any third-party package.
+
+---
+
+## Summary table
+
+| Component | License | Location |
+|-----------|---------|----------|
+| Bundle code, scripts, diagrams, docs | Apache 2.0 | This file §1 |
+| Source paper (IEEE TKDE) | IEEE personal-use | `02_source_paper/` |
+| TimeMMD dataset | ODC-By v1.0 | `12_dataset/` |
+| BERT-base-uncased weights | Apache 2.0 | (downloaded at runtime) |
+| Vazirmatn font | SIL OFL 1.1 | `07_fonts/Vazirmatn-*.ttf` |
+| Sahel font | SIL OFL 1.1 | `07_fonts/Sahel*.ttf` |
+| Thesis reports (Persian + English) | CC BY 4.0 | `01_final_deliverables/` |

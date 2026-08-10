@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "dataset": "TimeMMD",
+    "dataset_version": "1.0.0",
+    "source_url": "https://github.com/AdityaLab/Time-MMD",
+    "source_paper": "Qian et al., TimeMMD: A Multi-Domain Time-Series Multimodal Dataset, NeurIPS 2024 Datasets & Benchmarks.",
+    "leaderboard_url": "https://github.com/AdityaLab/Time-MMD#leaderboard",
+    "metrics": ["MSE", "MAE"],
+    "horizon_short": 96,
+    "horizon_long": 336,
+    "license": "ODC-By v1.0 (dataset) / MIT (MM-TSFlib)",
+    "schema_version": "1.0.0",
+    "fetched_on": null,
+    "fetched_by": null,
+    "note": "SCORES ARE INTENTIONALLY NULL. To populate them with the verified official leaderboard values, either (a) run `python scripts/fetch_leaderboard.py --output baselines/timemmd_leaderboard.json`, which scrapes the README of github.com/AdityaLab/Time-MMD and writes the verified values into this file, or (b) manually paste the values from the GitHub leaderboard table into the `scores` objects below. Until `fetched_on` is set to a real ISO-8601 timestamp, every `scores` entry MUST be null and MUST NOT be cited in any publication. This schema is shipped intentionally empty to honor the zero-hallucination constraint: the bundle never reports a baseline number that has not been verified against the upstream source."
+  },
+  "domains": [
+    "Solar",
+    "Wind",
+    "Electricity",
+    "Traffic",
+    "Bitcoin",
+    "ETT1",
+    "ETT2",
+    "Exchange",
+    "Weather"
+  ],
+  "baselines": {
+    "Transformer": {
+      "family": "Transformer-based",
+      "paper": "Vaswani et al., 2017, Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "code_repo": "https://github.com/thuml/Time-Series-Library",
+      "scores": null
+    },
+    "Reformer": {
+      "family": "Transformer-based",
+      "paper": "Kitaev et al., 2020, Reformer: The Efficient Transformer",
+      "url": "https://arxiv.org/abs/2001.04451",
+      "code_repo": "https://github.com/thuml/Time-Series-Library",
+      "scores": null
+    },
+    "Informer": {
+      "family": "Transformer-based",
+      "paper": "Zhou et al., 2021, Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting, AAAI 2021",
+      "url": "https://arxiv.org/abs/2012.07436",
+      "code_repo": "https://github.com/thuml/Time-Series-Library",
+      "scores": null
+    },
+    "Autoformer": {
+      "family": "Transformer-based",
+      "paper": "Wu et al., 2021, Autoformer: Decomposition Transformer with Auto-Correlation, NeurIPS 2021",
+      "url": "https://arxiv.org/abs/2106.13008",
+      "code_repo": "https://github.com/thuml/Autoformer",
+      "scores": null
+    },
+    "Crossformer": {
+      "family": "Transformer-based",
+      "paper": "Zhang & Yan, 2023, Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting, ICLR 2023",
+      "url": "https://arxiv.org/abs/2205.06056",
+      "code_repo": "https://github.com/Thinklab-SJTU/Crossformer",
+      "scores": null
+    },
+    "Non-stationary Transformer": {
+      "family": "Transformer-based",
+      "paper": "Liu et al., 2022, Non-stationary Transformers: Exploring the Stationarity in Time Series Forecasting, NeurIPS 2022",
+      "url": "https://arxiv.org/abs/2205.14415",
+      "code_repo": "https://github.com/thuml/Nonstationary_Transformers",
+      "scores": null
+    },
+    "FEDformer": {
+      "family": "Transformer-based",
+      "paper": "Zhou et al., 2022, FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting, ICML 2022",
+      "url": "https://arxiv.org/abs/2201.12740",
+      "code_repo": "https://github.com/MAZiqing/FEDformer",
+      "scores": null
+    },
+    "iTransformer": {
+      "family": "Transformer-based",
+      "paper": "Liu et al., 2024, iTransformer: Inverted Transformers are Effective for Time Series Forecasting, ICLR 2024",
+      "url": "https://arxiv.org/abs/2310.06625",
+      "code_repo": "https://github.com/thuml/iTransformer",
+      "scores": null
+    },
+    "DLinear": {
+      "family": "MLP-based",
+      "paper": "Zeng et al., 2023, Are Transformers Effective for Time Series Forecasting?, AAAI 2023",
+      "url": "https://arxiv.org/abs/2205.13504",
+      "code_repo": "https://github.com/cure-lab/LTSF-Linear",
+      "scores": null
+    },
+    "FiLM": {
+      "family": "Agnostic",
+      "paper": "Zhou et al., 2022, FiLM: Frequency improved Legendre Memory Model for Long-term Forecasting, NeurIPS 2022",
+      "url": "https://arxiv.org/abs/2205.08897",
+      "code_repo": "https://github.com/tianzhou2011/FiLM",
+      "scores": null
+    },
+    "TimesNet": {
+      "family": "CNN-based",
+      "paper": "Wu et al., 2023, TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis, ICLR 2023",
+      "url": "https://arxiv.org/abs/2210.02186",
+      "code_repo": "https://github.com/thuml/Time-Series-Library",
+      "scores": null
+    },
+    "PatchTST": {
+      "family": "Transformer-based (patch tokenization)",
+      "paper": "Nie et al., 2023, A Time Series is Worth 64 Words: Long-term Forecasting with Transformers, ICLR 2023",
+      "url": "https://arxiv.org/abs/2211.14730",
+      "code_repo": "https://github.com/PatchTST/PatchTST",
+      "scores": null
+    }
+  }
+}

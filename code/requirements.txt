@@ -1,0 +1,30 @@
+# MVGT-Net Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Core deep learning (CPU version; for GPU, see https://pytorch.org/get-started/locally/)
+torch>=2.0.0
+
+# Configuration
+pyyaml>=6.0
+
+# Optional: Ranger21 optimizer (as used in the ST-LLM+ source paper)
+# If not installed, training falls back to AdamW.
+ranger21>=2.1.0
+
+# Optional: HuggingFace transformers for BERT text encoder and T5 text decoder
+# If not installed, the text branch uses a learnable linear projection.
+transformers>=4.30.0
+
+# Optional: bitsandbytes for 4-bit quantization (QLoRA)
+# Required only if use_qlora=true in config.
+# bitsandbytes>=0.41.0
+
+# Optional: SHAP for interpretability analysis
+# Required only for Chapter 5 (Q5) interpretability experiments.
+# shap>=0.43.0
+
+# Optional: Weights & Biases for experiment tracking
+# wandb>=0.15.0
+
+# Development / testing
+pytest>=7.0

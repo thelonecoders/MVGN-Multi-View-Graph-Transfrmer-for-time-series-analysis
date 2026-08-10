@@ -1,0 +1,47 @@
+{
+  "domain": "Health_Flu",
+  "config": "us_fluratio_week_predLen_24",
+  "frequency": "weekly",
+  "variables": 1,
+  "description": "US flu ratio (ILI ratio) \u2014 Health_US domain, 24-week horizon",
+  "text_coverage": "real CDC text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Health_Flu/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_fluratio_week_predLen_24/train.jsonl",
+      "status": "OK",
+      "bytes": 9751839,
+      "expected_bytes": null,
+      "sha256": "dcf5940ef5089cb319a719ebd286046eddd2eadb8d024a15fbad55fb1917d6f8",
+      "lfs_oid": null,
+      "records": 896
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Health_Flu/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_fluratio_week_predLen_24/validation.jsonl",
+      "status": "OK",
+      "bytes": 2435389,
+      "expected_bytes": null,
+      "sha256": "fd7c3c5d4f2d8c39c65585dfc4861befb2ea33b34d01038fc47cc62f5cccf7df",
+      "lfs_oid": null,
+      "records": 224
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Health_Flu/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_fluratio_week_predLen_24/test.jsonl",
+      "status": "OK",
+      "bytes": 2613245,
+      "expected_bytes": null,
+      "sha256": "4c0fd080b0c94276796c4aabd582422b37b973769fa92599ae29aaa3748e5065",
+      "lfs_oid": null,
+      "records": 224
+    }
+  ],
+  "total_bytes": 14800473
+}

@@ -1,0 +1,47 @@
+{
+  "domain": "Agriculture_Fema",
+  "config": "us_femagrant_month_predLen_12",
+  "frequency": "monthly",
+  "variables": 1,
+  "description": "US FEMA grant approvals \u2014 Agriculture/Public domain, 12-month horizon",
+  "text_coverage": "real FEMA text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Agriculture_Fema/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_femagrant_month_predLen_12/train.jsonl",
+      "status": "OK",
+      "bytes": 988724,
+      "expected_bytes": null,
+      "sha256": "80a11e4639d84f3a64b3849a3b116d8ded678919d0aefa9782d09b04b36c2227",
+      "lfs_oid": null,
+      "records": 160
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Agriculture_Fema/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_femagrant_month_predLen_12/validation.jsonl",
+      "status": "OK",
+      "bytes": 199742,
+      "expected_bytes": null,
+      "sha256": "d3f506f961e101ec00c74fdad14b55667a0261cfb70d541ea9e02af35e114ddc",
+      "lfs_oid": null,
+      "records": 32
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Agriculture_Fema/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_femagrant_month_predLen_12/test.jsonl",
+      "status": "OK",
+      "bytes": 206334,
+      "expected_bytes": null,
+      "sha256": "80b2e19e17ecf2128806cec4b0dab5f9bdbd922b30e8e2794d34fa10ff3ca93b",
+      "lfs_oid": null,
+      "records": 32
+    }
+  ],
+  "total_bytes": 1394800
+}

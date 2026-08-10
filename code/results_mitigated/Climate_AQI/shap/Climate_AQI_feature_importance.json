@@ -1,0 +1,310 @@
+{
+  "domain": "Climate_AQI",
+  "explainer": "shap.PermutationExplainer (max_evals=25)",
+  "shap_values_shape": [
+    10,
+    12,
+    96
+  ],
+  "interpretation_dimensions": {
+    "n_samples": 10,
+    "n_input_features": 12,
+    "n_output_timesteps": 96,
+    "input_aggregation": "12 weekly chunks (8 days each) from 96-day lookback",
+    "output_horizon": "96 daily predictions (3-month forecast)"
+  },
+  "input_feature_importance": {
+    "description": "Which input WEEKS matter most for predictions (aggregated across all 96 output timesteps)",
+    "feature_names": [
+      "Week 1 (days 0-7)",
+      "Week 2 (days 8-15)",
+      "Week 3 (days 16-23)",
+      "Week 4 (days 24-31)",
+      "Week 5 (days 32-39)",
+      "Week 6 (days 40-47)",
+      "Week 7 (days 48-55)",
+      "Week 8 (days 56-63)",
+      "Week 9 (days 64-71)",
+      "Week 10 (days 72-79)",
+      "Week 11 (days 80-87)",
+      "Week 12 (days 88-95)"
+    ],
+    "mean_abs_shap": [
+      0.005056632890055576,
+      0.0066098393072995055,
+      0.004609876016465326,
+      0.005772405244720479,
+      0.010562119542155416,
+      0.0038904389658321937,
+      0.003123797294373314,
+      0.005772048311152805,
+      0.007524934644189974,
+      0.009159673035300025,
+      0.013127967669162901,
+      0.021156536993260186
+    ]
+  },
+  "output_timestep_importance": {
+    "description": "Which output DAYS are most influenced by inputs (aggregated across all 12 input weeks)",
+    "n_timesteps": 96,
+    "mean_abs_shap": [
+      0.007946694685767093,
+      0.006656439073383804,
+      0.006877981098989646,
+      0.007650085330009462,
+      0.007059344694018366,
+      0.006408114271859329,
+      0.006889794337252774,
+      0.007578793227672579,
+      0.008006565779447554,
+      0.008070480786263943,
+      0.007661932531744245,
+      0.0071733175093929,
+      0.007744498185813427,
+      0.007047207492093245,
+      0.0077309500475724584,
+      0.00733958026021719,
+      0.00680870772898197,
+      0.007219630979001523,
+      0.0075957827667395275,
+      0.0067808716123302784,
+      0.007515100702643391,
+      0.008174191671113171,
+      0.008279324685533844,
+      0.0076388237128655135,
+      0.008195868002871674,
+      0.007829233666261036,
+      0.00827811637148261,
+      0.008513836642106374,
+      0.008164978691687187,
+      0.008008102125177781,
+      0.008829791858792312,
+      0.008405941933393479,
+      0.00937509107962251,
+      0.010755056224763396,
+      0.008315282490104436,
+      0.008506476269414025,
+      0.008929728237291181,
+      0.008930602634946504,
+      0.009710437526305515,
+      0.008689232115944225,
+      0.008370038973788418,
+      0.009045603146155675,
+      0.00897074137752255,
+      0.008854066189378501,
+      0.008686702467501166,
+      0.009462867220242817,
+      0.010186897431810702,
+      0.008701483607292178,
+      0.009303327076137066,
+      0.008903979681432247,
+      0.008173852709432444,
+      0.009632107851405936,
+      0.008386366710066796,
+      0.009362517677247523,
+      0.009462546246747179,
+      0.00797277412066857,
+      0.010008833542466162,
+      0.008185327681402364,
+      0.007872378113369145,
+      0.009158095450450977,
+      0.008906293209642173,
+      0.009481280157963439,
+      0.007754448542992268,
+      0.007811242985228692,
+      0.009017237844566506,
+      0.008095306364198526,
+      0.008400419359405834,
+      0.009157413979371386,
+      0.007599749577542147,
+      0.00811819968124231,
+      0.007842945979287228,
+      0.007357756155232585,
+      0.007875174666444459,
+      0.006504635863006116,
+      0.008712780999640624,
+      0.007507926426827908,
+      0.007165583553413548,
+      0.008090666398406028,
+      0.007512836518386998,
+      0.006888510378698505,
+      0.007572152391076089,
+      0.008812077453980842,
+      0.0072354979068040845,
+      0.008825772828112049,
+      0.007459359851976241,
+      0.006792740888893603,
+      0.00807376548399528,
+      0.0071405105839173,
+      0.006084935714801153,
+      0.005779419372479121,
+      0.006773054733872413,
+      0.0068571600243449195,
+      0.007217761280635993,
+      0.0065483450690905255,
+      0.006992174218098324,
+      0.006972526552776498
+    ]
+  },
+  "top_10_input_features": [
+    {
+      "rank": 1,
+      "feature": "Week 12 (days 88-95)",
+      "week_index": 11,
+      "mean_abs_shap": 0.021156536993260186,
+      "percent_of_total": 21.954296884322666
+    },
+    {
+      "rank": 2,
+      "feature": "Week 11 (days 80-87)",
+      "week_index": 10,
+      "mean_abs_shap": 0.013127967669162901,
+      "percent_of_total": 13.622990368811692
+    },
+    {
+      "rank": 3,
+      "feature": "Week 5 (days 32-39)",
+      "week_index": 4,
+      "mean_abs_shap": 0.010562119542155416,
+      "percent_of_total": 10.960390551159541
+    },
+    {
+      "rank": 4,
+      "feature": "Week 10 (days 72-79)",
+      "week_index": 9,
+      "mean_abs_shap": 0.009159673035300025,
+      "percent_of_total": 9.505061307735007
+    },
+    {
+      "rank": 5,
+      "feature": "Week 9 (days 64-71)",
+      "week_index": 8,
+      "mean_abs_shap": 0.007524934644189974,
+      "percent_of_total": 7.808681036329372
+    },
+    {
+      "rank": 6,
+      "feature": "Week 2 (days 8-15)",
+      "week_index": 1,
+      "mean_abs_shap": 0.0066098393072995055,
+      "percent_of_total": 6.859079751868085
+    },
+    {
+      "rank": 7,
+      "feature": "Week 4 (days 24-31)",
+      "week_index": 3,
+      "mean_abs_shap": 0.005772405244720479,
+      "percent_of_total": 5.990068153383826
+    },
+    {
+      "rank": 8,
+      "feature": "Week 8 (days 56-63)",
+      "week_index": 7,
+      "mean_abs_shap": 0.005772048311152805,
+      "percent_of_total": 5.9896977607474895
+    },
+    {
+      "rank": 9,
+      "feature": "Week 1 (days 0-7)",
+      "week_index": 0,
+      "mean_abs_shap": 0.005056632890055576,
+      "percent_of_total": 5.247305820355975
+    },
+    {
+      "rank": 10,
+      "feature": "Week 3 (days 16-23)",
+      "week_index": 2,
+      "mean_abs_shap": 0.004609876016465326,
+      "percent_of_total": 4.783702866761217
+    }
+  ],
+  "top_10_input_output_pairs": [
+    {
+      "rank": 1,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 34 of forecast",
+      "output_day_index": 33,
+      "mean_abs_shap": 0.036582248300313945
+    },
+    {
+      "rank": 2,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 32 of forecast",
+      "output_day_index": 31,
+      "mean_abs_shap": 0.031452854841947556
+    },
+    {
+      "rank": 3,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 33 of forecast",
+      "output_day_index": 32,
+      "mean_abs_shap": 0.03125815057754516
+    },
+    {
+      "rank": 4,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 47 of forecast",
+      "output_day_index": 46,
+      "mean_abs_shap": 0.030976885706186286
+    },
+    {
+      "rank": 5,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 37 of forecast",
+      "output_day_index": 36,
+      "mean_abs_shap": 0.0309002079963684
+    },
+    {
+      "rank": 6,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 38 of forecast",
+      "output_day_index": 37,
+      "mean_abs_shap": 0.03080557188391685
+    },
+    {
+      "rank": 7,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 31 of forecast",
+      "output_day_index": 30,
+      "mean_abs_shap": 0.03074181076884271
+    },
+    {
+      "rank": 8,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 30 of forecast",
+      "output_day_index": 29,
+      "mean_abs_shap": 0.03045760606229305
+    },
+    {
+      "rank": 9,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 36 of forecast",
+      "output_day_index": 35,
+      "mean_abs_shap": 0.030021901935338973
+    },
+    {
+      "rank": 10,
+      "input_week": "Week 12 (days 88-95)",
+      "input_week_index": 11,
+      "output_day": "Day 46 of forecast",
+      "output_day_index": 45,
+      "mean_abs_shap": 0.029254540428519236
+    }
+  ],
+  "summary_statistics": {
+    "total_shap_magnitude": 92.51161911740898,
+    "mean_shap_magnitude": 0.008030522492830641,
+    "max_single_shap": 0.060784827768802646,
+    "recency_concentration": 2.6345156261187204,
+    "interpretation": "recency_concentration > 2.0 means model strongly favors most recent week"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "domain": "Agriculture_Broil",
+  "config": "us_retailbroilercomposite_month_predLen_12",
+  "frequency": "monthly",
+  "variables": 1,
+  "description": "US retail broiler composite price \u2014 Agriculture domain, 12-month horizon",
+  "text_coverage": "real USDA text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Agriculture_Broil/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_retailbroilercomposite_month_predLen_12/train.jsonl",
+      "status": "OK",
+      "bytes": 1157703,
+      "expected_bytes": null,
+      "sha256": "fb7012c6ca642260d5ed65d3c3a15537e25d10376708bd5655c7a53cb0b19111",
+      "lfs_oid": null,
+      "records": 320
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Agriculture_Broil/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_retailbroilercomposite_month_predLen_12/validation.jsonl",
+      "status": "OK",
+      "bytes": 411830,
+      "expected_bytes": null,
+      "sha256": "df6bc5ceb99de6a2f4b0d1e811b4d692993c18271efdf2a82ebe2216d36df537",
+      "lfs_oid": null,
+      "records": 64
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Agriculture_Broil/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_retailbroilercomposite_month_predLen_12/test.jsonl",
+      "status": "OK",
+      "bytes": 425014,
+      "expected_bytes": null,
+      "sha256": "05c797bc0b7160c70f20f91737e3ebbceedcaf9881100194a22a6f10b4fa921c",
+      "lfs_oid": null,
+      "records": 64
+    }
+  ],
+  "total_bytes": 1994547
+}

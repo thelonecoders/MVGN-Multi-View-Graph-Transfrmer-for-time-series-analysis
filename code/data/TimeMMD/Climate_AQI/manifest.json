@@ -1,0 +1,47 @@
+{
+  "domain": "Climate_AQI",
+  "config": "newyork_aqi_day_predLen_96",
+  "frequency": "daily",
+  "variables": 1,
+  "description": "NYC air-quality index (PM2.5) \u2014 Climate domain, 96-day horizon",
+  "text_coverage": "real text facts per record (EPA + news excerpts)",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Climate_AQI/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/newyork_aqi_day_predLen_96/train.jsonl",
+      "status": "OK",
+      "bytes": 175319957,
+      "expected_bytes": null,
+      "sha256": "700a48defc05caf863630149dd9023c5b2f128b9fe0a5db602c595cbdc87f88d",
+      "lfs_oid": null,
+      "records": 7552
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Climate_AQI/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/newyork_aqi_day_predLen_96/validation.jsonl",
+      "status": "OK",
+      "bytes": 48203664,
+      "expected_bytes": null,
+      "sha256": "f61bfd19bc17eec734eccd3acdcffabf1d50ff367e4a7302e48f5abab5581cdc",
+      "lfs_oid": null,
+      "records": 2112
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Climate_AQI/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/newyork_aqi_day_predLen_96/test.jsonl",
+      "status": "OK",
+      "bytes": 52541712,
+      "expected_bytes": null,
+      "sha256": "a73e85f18974d37cf66630b7ab416e5ce83563a3d6c4567c7c26ff8a560146c4",
+      "lfs_oid": null,
+      "records": 2112
+    }
+  ],
+  "total_bytes": 276065333
+}

@@ -1,0 +1,95 @@
+# CITATION.cff — Citation File Format (https://citation-file-format.github.io/)
+# Machine-readable citation metadata for the ST-LLM-Plus Thesis Bundle.
+# GitHub, Zenodo, and other archives auto-detect this file and surface a
+# "Cite this repository" UI on the repo page.
+
+cff-version: 1.2.0
+message: "If you use this bundle, please cite both the source paper and the TimeMMD dataset using the references below."
+title: "ST-LLM-Plus Thesis Bundle: Bilingual Technical Report + MVGT-Net Implementation + TimeMMD Dataset"
+abstract: >
+  A complete, audited thesis bundle for ST-LLM+ (Graph Enhanced Spatio-Temporal
+  Large Language Models for Traffic Prediction, IEEE TKDE 2025). Contains
+  bilingual (Persian + English) thesis reports, a complete PyTorch implementation
+  of the proposed MVGT-Net extension, the REAL TimeMMD dataset (9 domains,
+  17,504 records, 322 MB), a GPU recommendation for RTX 3080 Ti, and a
+  single-command end-to-end execution pipeline.
+authors:
+  - family-names: "ST-LLM-Plus"
+    given-names: "Thesis Bundle Authors"
+type: software
+version: "4.0.0"
+date-released: "2026-08-09"
+license: Apache-2.0
+license-url: "https://www.apache.org/licenses/LICENSE-2.0"
+repository-code: "https://example.invalid/st-llm-plus-thesis-bundle"
+keywords:
+  - spatio-temporal
+  - large language model
+  - traffic prediction
+  - time series
+  - multimodal
+  - LoRA
+  - graph neural network
+  - conformal prediction
+  - TimeMMD
+  - ST-LLM+
+preferred-citation:
+  type: article
+  title: "ST-LLM+: Graph Enhanced Spatio-Temporal Large Language Models for Traffic Prediction"
+  authors:
+    - family-names: "Liu"
+      given-names: "Chenxi"
+    - family-names: "Hettige"
+      given-names: "Kethmi Hirushini"
+    - family-names: "Xu"
+      given-names: "Qianxiong"
+    - family-names: "Long"
+      given-names: "Cheng"
+    - family-names: "Xiang"
+      given-names: "Sheng"
+    - family-names: "Cong"
+      given-names: "Gao"
+    - family-names: "Li"
+      given-names: "Zihao"
+    - family-names: "Zhao"
+      given-names: "Rui"
+  journal: "IEEE Transactions on Knowledge and Data Engineering"
+  volume: 37
+  issue: 8
+  pages: "4846-4859"
+  year: 2025
+  doi: "10.1109/TKDE.2025.3570705"
+  keywords:
+    - spatio-temporal
+    - large language model
+    - traffic prediction
+references:
+  - type: inproceedings
+    title: "Time-MMD: A New Multi-Domain Multimodal Dataset for Time Series Analysis"
+    authors:
+      - family-names: "Liu"
+        given-names: "Haoxin"
+      - family-names: "Xu"
+        given-names: "Shangqing"
+      - family-names: "Zhao"
+        given-names: "Zhiyuan"
+      - family-names: "Kong"
+        given-names: "Lingkai"
+      - family-names: "Kamarthi"
+        given-names: "Harshavardhan"
+      - family-names: "Sasanur"
+        given-names: "Aditya B."
+      - family-names: "Sharma"
+        given-names: "Megha"
+      - family-names: "Cui"
+        given-names: "Jiaming"
+      - family-names: "Wen"
+        given-names: "Qingsong"
+      - family-names: "Zhang"
+        given-names: "Chao"
+      - family-names: "Prakash"
+        given-names: "B. Aditya"
+    conference:
+      name: "NeurIPS 2024 Datasets and Benchmarks Track"
+    year: 2024
+    notes: "arXiv:2406.08627"

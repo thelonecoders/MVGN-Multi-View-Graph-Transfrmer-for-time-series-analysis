@@ -1,0 +1,48 @@
+# Dependabot configuration for the ST-LLM-Plus / MVGT-Net code package.
+# Keeps Python dependencies and GitHub Actions versions up to date.
+# Docs: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+---
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tehran"
+    open-pull-requests-limit: 5
+    groups:
+      python-runtime:
+        patterns: ["torch", "transformers", "tokenizers", "huggingface-hub", "safetensors", "ranger21"]
+        update-types: ["minor", "patch"]
+      python-science:
+        patterns: ["numpy", "scipy", "pandas", "matplotlib", "tqdm", "pyyaml"]
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: "deps(pip)"
+      include: "scope"
+    labels: ["dependencies", "python"]
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      python-dev:
+        patterns: ["pytest", "pytest-cov", "pytest-xdist", "ruff", "mypy", "pre-commit", "types-*"]
+    commit-message:
+      prefix: "deps(dev)"
+      include: "scope"
+    labels: ["dependencies", "dev"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci(actions)"
+      include: "scope"
+    labels: ["dependencies", "github-actions"]

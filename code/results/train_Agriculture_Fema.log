@@ -1,0 +1,121 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Agriculture_Fema
+  US FEMA grant approvals — Agriculture/Public domain
+  frequency=monthly  lookback=8  horizon=12
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 160 samples
+  Val  : 32 samples
+  Test : 32 samples
+  Normalize: mean=347487552.0, std=324885280.0
+  Parameters: total=3,878,688  trainable=1,070,112 (27.59%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 25 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=25 iters, total=500 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.8295 | val_MAE=8.1841 | val_RMSE=13.4309 | lr=2.00e-04 | 13.5s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   2/100 | loss=0.8068 | val_MAE=8.1604 | val_RMSE=13.4166 | lr=4.00e-04 | 13.4s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   3/100 | loss=0.7924 | val_MAE=8.1023 | val_RMSE=13.3801 | lr=6.00e-04 | 11.7s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   4/100 | loss=0.7553 | val_MAE=7.9800 | val_RMSE=13.3034 | lr=8.00e-04 | 11.6s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   5/100 | loss=0.7397 | val_MAE=7.8292 | val_RMSE=13.2058 | lr=1.00e-03 | 12.1s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.7710 | val_MAE=7.6738 | val_RMSE=13.1108 | lr=1.00e-03 | 12.6s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   7/100 | loss=0.7875 | val_MAE=7.6034 | val_RMSE=13.0714 | lr=9.99e-04 | 11.7s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   8/100 | loss=0.7706 | val_MAE=7.5461 | val_RMSE=13.0331 | lr=9.98e-04 | 12.0s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  Epoch   9/100 | loss=0.7325 | val_MAE=7.5564 | val_RMSE=13.0396 | lr=9.96e-04 | 13.7s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  10/100 | loss=0.7128 | val_MAE=7.5441 | val_RMSE=13.0371 | lr=9.93e-04 | 15.1s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/best.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/epoch_10.pt
+  Epoch  11/100 | loss=0.7263 | val_MAE=7.6950 | val_RMSE=13.1202 | lr=9.90e-04 | 13.0s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  12/100 | loss=0.6964 | val_MAE=7.7040 | val_RMSE=13.1343 | lr=9.87e-04 | 17.2s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  13/100 | loss=0.7111 | val_MAE=7.7656 | val_RMSE=13.1551 | lr=9.83e-04 | 12.1s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  14/100 | loss=0.7033 | val_MAE=7.7256 | val_RMSE=13.1412 | lr=9.78e-04 | 12.4s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  15/100 | loss=0.7234 | val_MAE=7.7729 | val_RMSE=13.1515 | lr=9.73e-04 | 14.8s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  16/100 | loss=0.7008 | val_MAE=7.7213 | val_RMSE=13.1344 | lr=9.67e-04 | 12.5s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  17/100 | loss=0.6974 | val_MAE=7.8022 | val_RMSE=13.1771 | lr=9.61e-04 | 12.5s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  18/100 | loss=0.6674 | val_MAE=7.7818 | val_RMSE=13.1719 | lr=9.55e-04 | 13.6s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  19/100 | loss=0.6836 | val_MAE=7.7791 | val_RMSE=13.1680 | lr=9.47e-04 | 12.3s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  20/100 | loss=0.6718 | val_MAE=7.7988 | val_RMSE=13.1838 | lr=9.40e-04 | 12.6s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  [checkpoint] saved checkpoints/Agriculture_Fema/epoch_20.pt
+  Epoch  21/100 | loss=0.6817 | val_MAE=7.7799 | val_RMSE=13.1747 | lr=9.32e-04 | 13.4s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  22/100 | loss=0.6846 | val_MAE=7.8197 | val_RMSE=13.2017 | lr=9.23e-04 | 12.9s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  23/100 | loss=0.6673 | val_MAE=7.8028 | val_RMSE=13.1904 | lr=9.14e-04 | 13.3s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  24/100 | loss=0.6661 | val_MAE=7.8253 | val_RMSE=13.2020 | lr=9.05e-04 | 11.9s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Epoch  25/100 | loss=0.6542 | val_MAE=7.8021 | val_RMSE=13.1855 | lr=8.95e-04 | 12.3s
+  [checkpoint] saved checkpoints/Agriculture_Fema/latest.pt
+  Early stopping at epoch 25 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=7.5441)
+
+  Final test metrics:
+    MAE: 7.5441
+    MSE: 169.9656
+    RMSE: 13.0371
+    WAPE: 93.8552
+    MAPE: 92.6241
+    sMAPE: 161.6957
+    R2: -0.5013
+
+  Metrics written to results/Agriculture_Fema/metrics.json
+  Total training time: 329.6s  (5.5 min)

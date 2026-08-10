@@ -1,0 +1,23 @@
+2026-08-10 12:49:13,055 [INFO] === Integrated Gradients (Climate_AQI, Step J) ===
+2026-08-10 12:49:13,055 [INFO] Bundle root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle
+2026-08-10 12:49:13,055 [INFO] Metrics JSON: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json
+2026-08-10 12:49:13,055 [INFO] Checkpoint:   /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt
+2026-08-10 12:49:13,055 [INFO] Device: cuda
+2026-08-10 12:49:13,077 [INFO] GPU: NVIDIA GeForce RTX 3080 Ti
+2026-08-10 12:49:13,077 [INFO] n_samples: 10, n_steps: 64
+2026-08-10 12:49:13,077 [INFO] Config: num_nodes=1, input_dim=1, hidden_dim=64, lookback=96, horizon=96
+2026-08-10 12:49:14,495 [INFO] Model loaded.
+2026-08-10 12:49:14,495 [INFO] Checkpoint best_val_mae: 0.09621798992156982
+2026-08-10 12:49:14,495 [INFO] Loading real test samples via mvgt_net.data.get_dataloaders(domain='Climate_AQI', data_root=/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD)
+2026-08-10 12:49:27,207 [INFO]   test_size=2112 samples, lookback=96, horizon=96, frequency=daily
+2026-08-10 12:49:27,280 [INFO]   loaded batch: x_numeric shape=(10, 96, 1, 1)
+2026-08-10 12:49:27,359 [INFO] x_numeric tensor shape: (10, 96, 1, 1), dtype: torch.float32
+2026-08-10 12:49:27,369 [INFO] Computing Integrated Gradients (n_steps=64)...
+2026-08-10 12:49:28,198 [INFO] IG computed for 10 samples in 0.8 s
+2026-08-10 12:49:28,677 [INFO] Plots saved: ig_attribution_bar.png, ig_attribution_heatmap.png
+2026-08-10 12:49:28,677 [INFO] === Integrated Gradients Summary ===
+2026-08-10 12:49:28,677 [INFO] Attributions shape: (10, 96, 1, 1)
+2026-08-10 12:49:28,677 [INFO] Top-5 features by |IG|:
+2026-08-10 12:49:28,677 [INFO]   feature 0: 0.001155
+2026-08-10 12:49:28,677 [INFO] Peak timestep: t=95 (value=0.005349)
+2026-08-10 12:49:28,678 [INFO] Outputs written to: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/integrated_gradients

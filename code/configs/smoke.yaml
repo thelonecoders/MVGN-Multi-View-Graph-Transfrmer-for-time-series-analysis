@@ -1,0 +1,75 @@
+# MVGT-Net smoke-test configuration.
+# Used by CI (GitHub Actions) and by run_all_experiments.py --phase smoke.
+# Runs 2 epochs on synthetic data; verifies the pipeline end-to-end.
+#
+# To run:
+#   python scripts/train.py --config configs/smoke.yaml --smoke-test
+
+model:
+  num_nodes: 8                 # small for fast smoke test
+  input_dim: 1
+  hidden_dim: 32
+  lookback: 12
+  horizon: 12
+  use_text: true
+  use_categorical: true
+  num_categories: 5
+  text_model: bert-base-uncased
+  graph_types: [spatial, temporal, semantic, adaptive]
+  topk: 4
+  num_heads: 2
+  frozen_layers: 2             # reduced from 6 for smoke test
+  unfrozen_layers: 1           # reduced from 2 for smoke test
+  lora_rank: 4                 # reduced from 8 for smoke test
+  use_qlora: false
+  use_text_gen: false
+  dropout: 0.1
+
+training:
+  optimizer: adamw             # use AdamW for smoke test (no ranger21 dep)
+  learning_rate: 0.001
+  batch_size: 4
+  max_epochs: 2
+  weight_decay: 0.0
+  warmup_epochs: 0
+  gradient_clip: 1.0
+  scheduler: none
+  early_stopping_patience: 0   # disabled for smoke test
+  mixed_precision: none        # disabled for smoke test
+
+data:
+  domain: synthetic
+  data_dir: ../../12_dataset/synthetic_sample/
+  train_ratio: 0.6
+  val_ratio: 0.2
+  test_ratio: 0.2
+  normalize: standard
+  text_max_length: 32
+
+loss:
+  task_names: [numeric, categorical]
+  history_length: 5
+  hidden_dim: 16
+
+evaluation:
+  metrics: [MAE, MSE, RMSE, WAPE, MAPE, sMAPE, R2]
+  save_predictions: false
+  save_attention: false
+  conformal_alpha: 0.1
+
+hardware:
+  device: cpu                  # CI runs on CPU
+  num_workers: 0
+  pin_memory: false
+
+logging:
+  experiment_name: mvgtnet_smoke
+  log_dir: ./logs
+  checkpoint_dir: ./checkpoints
+  wandb_project: mvgtnet-smoke
+  log_every_n_steps: 1
+
+determinism:
+  seed: 42
+  cudnn_deterministic: true
+  cudnn_benchmark: false

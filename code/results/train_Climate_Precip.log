@@ -1,0 +1,156 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Climate_Precip
+  US precipitation index — Climate domain
+  frequency=monthly  lookback=8  horizon=12
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 320 samples
+  Val  : 64 samples
+  Test : 64 samples
+  Normalize: mean=2.5678553581237793, std=0.5339512825012207
+  Parameters: total=3,878,688  trainable=1,070,112 (27.59%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 50 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=50 iters, total=1000 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.9088 | val_MAE=0.9996 | val_RMSE=1.2447 | lr=2.00e-04 | 24.4s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   2/100 | loss=0.8855 | val_MAE=0.9570 | val_RMSE=1.1900 | lr=4.00e-04 | 23.2s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   3/100 | loss=0.8631 | val_MAE=0.8951 | val_RMSE=1.1164 | lr=6.00e-04 | 22.0s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   4/100 | loss=0.8324 | val_MAE=0.8487 | val_RMSE=1.0642 | lr=8.00e-04 | 21.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   5/100 | loss=0.8265 | val_MAE=0.8547 | val_RMSE=1.0777 | lr=1.00e-03 | 21.6s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.8299 | val_MAE=0.8550 | val_RMSE=1.0727 | lr=1.00e-03 | 21.3s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch   7/100 | loss=0.8285 | val_MAE=0.8407 | val_RMSE=1.0645 | lr=9.99e-04 | 20.8s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   8/100 | loss=0.8257 | val_MAE=0.8347 | val_RMSE=1.0616 | lr=9.98e-04 | 21.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch   9/100 | loss=0.8098 | val_MAE=0.8266 | val_RMSE=1.0518 | lr=9.96e-04 | 22.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch  10/100 | loss=0.8000 | val_MAE=0.8363 | val_RMSE=1.0609 | lr=9.93e-04 | 21.5s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/epoch_10.pt
+  Epoch  11/100 | loss=0.7949 | val_MAE=0.8453 | val_RMSE=1.0732 | lr=9.90e-04 | 28.9s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  12/100 | loss=0.7941 | val_MAE=0.8382 | val_RMSE=1.0681 | lr=9.87e-04 | 22.0s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  13/100 | loss=0.7957 | val_MAE=0.8339 | val_RMSE=1.0600 | lr=9.83e-04 | 21.6s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  14/100 | loss=0.7879 | val_MAE=0.8273 | val_RMSE=1.0469 | lr=9.78e-04 | 21.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  15/100 | loss=0.7760 | val_MAE=0.8285 | val_RMSE=1.0486 | lr=9.73e-04 | 23.6s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  16/100 | loss=0.7809 | val_MAE=0.8200 | val_RMSE=1.0436 | lr=9.67e-04 | 22.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch  17/100 | loss=0.7682 | val_MAE=0.8191 | val_RMSE=1.0412 | lr=9.61e-04 | 21.3s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch  18/100 | loss=0.7606 | val_MAE=0.8270 | val_RMSE=1.0489 | lr=9.55e-04 | 22.3s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  19/100 | loss=0.7574 | val_MAE=0.8258 | val_RMSE=1.0500 | lr=9.47e-04 | 21.5s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  20/100 | loss=0.7696 | val_MAE=0.8292 | val_RMSE=1.0551 | lr=9.40e-04 | 21.2s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/epoch_20.pt
+  Epoch  21/100 | loss=0.7782 | val_MAE=0.8245 | val_RMSE=1.0441 | lr=9.32e-04 | 21.6s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  22/100 | loss=0.7642 | val_MAE=0.8219 | val_RMSE=1.0423 | lr=9.23e-04 | 23.5s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  23/100 | loss=0.7631 | val_MAE=0.8227 | val_RMSE=1.0459 | lr=9.14e-04 | 21.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  24/100 | loss=0.7617 | val_MAE=0.8229 | val_RMSE=1.0441 | lr=9.05e-04 | 21.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  25/100 | loss=0.7613 | val_MAE=0.8204 | val_RMSE=1.0396 | lr=8.95e-04 | 21.9s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  26/100 | loss=0.7553 | val_MAE=0.8185 | val_RMSE=1.0395 | lr=8.84e-04 | 21.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/best.pt
+  Epoch  27/100 | loss=0.7580 | val_MAE=0.8190 | val_RMSE=1.0365 | lr=8.73e-04 | 22.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  28/100 | loss=0.7526 | val_MAE=0.8223 | val_RMSE=1.0418 | lr=8.62e-04 | 21.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  29/100 | loss=0.7489 | val_MAE=0.8262 | val_RMSE=1.0459 | lr=8.51e-04 | 21.8s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  30/100 | loss=0.7471 | val_MAE=0.8239 | val_RMSE=1.0447 | lr=8.39e-04 | 22.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/epoch_30.pt
+  Epoch  31/100 | loss=0.7435 | val_MAE=0.8285 | val_RMSE=1.0503 | lr=8.26e-04 | 21.3s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  32/100 | loss=0.7427 | val_MAE=0.8264 | val_RMSE=1.0463 | lr=8.14e-04 | 22.9s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  33/100 | loss=0.7469 | val_MAE=0.8209 | val_RMSE=1.0373 | lr=8.01e-04 | 24.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  34/100 | loss=0.7406 | val_MAE=0.8191 | val_RMSE=1.0362 | lr=7.87e-04 | 26.1s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  35/100 | loss=0.7404 | val_MAE=0.8241 | val_RMSE=1.0418 | lr=7.73e-04 | 26.9s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  36/100 | loss=0.7441 | val_MAE=0.8285 | val_RMSE=1.0493 | lr=7.59e-04 | 22.8s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  37/100 | loss=0.7415 | val_MAE=0.8285 | val_RMSE=1.0470 | lr=7.45e-04 | 21.5s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  38/100 | loss=0.7352 | val_MAE=0.8252 | val_RMSE=1.0431 | lr=7.31e-04 | 21.7s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  39/100 | loss=0.7393 | val_MAE=0.8252 | val_RMSE=1.0437 | lr=7.16e-04 | 21.0s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Epoch  40/100 | loss=0.7473 | val_MAE=0.8232 | val_RMSE=1.0406 | lr=7.01e-04 | 22.0s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  [checkpoint] saved checkpoints/Climate_Precip/epoch_40.pt
+  Epoch  41/100 | loss=0.7410 | val_MAE=0.8240 | val_RMSE=1.0440 | lr=6.86e-04 | 21.9s
+  [checkpoint] saved checkpoints/Climate_Precip/latest.pt
+  Early stopping at epoch 41 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=0.8185)
+
+  Final test metrics:
+    MAE: 0.8185
+    MSE: 1.0805
+    RMSE: 1.0395
+    WAPE: 95.4720
+    MAPE: 245.2153
+    sMAPE: 145.0073
+    R2: 0.0089
+
+  Metrics written to results/Climate_Precip/metrics.json
+  Total training time: 926.9s  (15.4 min)

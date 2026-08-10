@@ -1,0 +1,259 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Economy_Unemp
+  US unadjusted unemployment rate — Economy domain
+  frequency=monthly  lookback=8  horizon=12
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 608 samples
+  Val  : 160 samples
+  Test : 160 samples
+  Normalize: mean=5.673191070556641, std=1.6402883529663086
+  Parameters: total=3,878,688  trainable=1,070,112 (27.59%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 95 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=95 iters, total=1900 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.9351 | val_MAE=1.1497 | val_RMSE=1.4508 | lr=2.00e-04 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch   2/100 | loss=0.8698 | val_MAE=0.9603 | val_RMSE=1.2557 | lr=4.00e-04 | 23.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch   3/100 | loss=0.6834 | val_MAE=0.7038 | val_RMSE=1.0506 | lr=6.00e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch   4/100 | loss=0.5324 | val_MAE=0.5547 | val_RMSE=1.0145 | lr=8.00e-04 | 27.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch   5/100 | loss=0.5447 | val_MAE=0.5877 | val_RMSE=1.0006 | lr=1.00e-03 | 24.0s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.5490 | val_MAE=0.8180 | val_RMSE=1.0880 | lr=1.00e-03 | 24.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch   7/100 | loss=0.5609 | val_MAE=0.6311 | val_RMSE=1.0667 | lr=9.99e-04 | 28.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch   8/100 | loss=0.5415 | val_MAE=0.6955 | val_RMSE=1.0521 | lr=9.98e-04 | 23.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch   9/100 | loss=0.5292 | val_MAE=0.6282 | val_RMSE=1.0531 | lr=9.96e-04 | 24.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  10/100 | loss=0.5478 | val_MAE=0.6707 | val_RMSE=0.9987 | lr=9.93e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_10.pt
+  Epoch  11/100 | loss=0.5258 | val_MAE=0.5146 | val_RMSE=0.9636 | lr=9.90e-04 | 25.0s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  12/100 | loss=0.5056 | val_MAE=0.8753 | val_RMSE=1.1380 | lr=9.87e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  13/100 | loss=0.5021 | val_MAE=0.5036 | val_RMSE=0.9896 | lr=9.83e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  14/100 | loss=0.4922 | val_MAE=0.7506 | val_RMSE=1.0950 | lr=9.78e-04 | 23.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  15/100 | loss=0.5003 | val_MAE=0.5083 | val_RMSE=0.9487 | lr=9.73e-04 | 23.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  16/100 | loss=0.4922 | val_MAE=0.6754 | val_RMSE=1.0343 | lr=9.67e-04 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  17/100 | loss=0.4671 | val_MAE=0.4957 | val_RMSE=0.9824 | lr=9.61e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  18/100 | loss=0.4639 | val_MAE=0.5481 | val_RMSE=0.9926 | lr=9.55e-04 | 23.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  19/100 | loss=0.4748 | val_MAE=0.5057 | val_RMSE=0.9500 | lr=9.47e-04 | 23.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  20/100 | loss=0.4566 | val_MAE=0.5882 | val_RMSE=0.9727 | lr=9.40e-04 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_20.pt
+  Epoch  21/100 | loss=0.4620 | val_MAE=0.4868 | val_RMSE=0.9545 | lr=9.32e-04 | 24.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  22/100 | loss=0.4554 | val_MAE=0.6260 | val_RMSE=0.9914 | lr=9.23e-04 | 25.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  23/100 | loss=0.4444 | val_MAE=0.4845 | val_RMSE=0.9774 | lr=9.14e-04 | 23.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  24/100 | loss=0.4403 | val_MAE=0.6764 | val_RMSE=0.9927 | lr=9.05e-04 | 24.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  25/100 | loss=0.4519 | val_MAE=0.5007 | val_RMSE=0.9241 | lr=8.95e-04 | 31.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  26/100 | loss=0.4457 | val_MAE=0.6049 | val_RMSE=0.9761 | lr=8.84e-04 | 28.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  27/100 | loss=0.4536 | val_MAE=0.4918 | val_RMSE=0.9802 | lr=8.73e-04 | 23.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  28/100 | loss=0.4339 | val_MAE=0.5034 | val_RMSE=0.9647 | lr=8.62e-04 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  29/100 | loss=0.4348 | val_MAE=0.4568 | val_RMSE=0.9597 | lr=8.51e-04 | 23.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  30/100 | loss=0.4282 | val_MAE=0.5315 | val_RMSE=0.9467 | lr=8.39e-04 | 25.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_30.pt
+  Epoch  31/100 | loss=0.4207 | val_MAE=0.4910 | val_RMSE=0.9443 | lr=8.26e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  32/100 | loss=0.4108 | val_MAE=0.4996 | val_RMSE=0.9546 | lr=8.14e-04 | 28.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  33/100 | loss=0.4135 | val_MAE=0.4761 | val_RMSE=0.9471 | lr=8.01e-04 | 23.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  34/100 | loss=0.4100 | val_MAE=0.4770 | val_RMSE=0.9727 | lr=7.87e-04 | 23.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  35/100 | loss=0.4191 | val_MAE=0.4404 | val_RMSE=0.9384 | lr=7.73e-04 | 23.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  36/100 | loss=0.4007 | val_MAE=0.4733 | val_RMSE=0.9361 | lr=7.59e-04 | 25.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  37/100 | loss=0.4079 | val_MAE=0.4524 | val_RMSE=0.9478 | lr=7.45e-04 | 24.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  38/100 | loss=0.4118 | val_MAE=0.4641 | val_RMSE=0.9220 | lr=7.31e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  39/100 | loss=0.4132 | val_MAE=0.4979 | val_RMSE=0.9964 | lr=7.16e-04 | 23.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  40/100 | loss=0.4239 | val_MAE=0.4653 | val_RMSE=0.9321 | lr=7.01e-04 | 26.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_40.pt
+  Epoch  41/100 | loss=0.4189 | val_MAE=0.4600 | val_RMSE=0.9512 | lr=6.86e-04 | 24.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  42/100 | loss=0.4093 | val_MAE=0.4431 | val_RMSE=0.9338 | lr=6.70e-04 | 30.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  43/100 | loss=0.4023 | val_MAE=0.4706 | val_RMSE=0.9555 | lr=6.55e-04 | 26.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  44/100 | loss=0.4009 | val_MAE=0.4285 | val_RMSE=0.9388 | lr=6.39e-04 | 26.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  45/100 | loss=0.3965 | val_MAE=0.4625 | val_RMSE=0.9385 | lr=6.23e-04 | 24.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  46/100 | loss=0.4023 | val_MAE=0.4237 | val_RMSE=0.9279 | lr=6.07e-04 | 25.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  47/100 | loss=0.4015 | val_MAE=0.5202 | val_RMSE=0.9572 | lr=5.90e-04 | 25.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  48/100 | loss=0.4072 | val_MAE=0.4209 | val_RMSE=0.9240 | lr=5.74e-04 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  49/100 | loss=0.4016 | val_MAE=0.5525 | val_RMSE=0.9458 | lr=5.58e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  50/100 | loss=0.4005 | val_MAE=0.4199 | val_RMSE=0.9226 | lr=5.41e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_50.pt
+  Epoch  51/100 | loss=0.3919 | val_MAE=0.4440 | val_RMSE=0.9315 | lr=5.25e-04 | 27.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  52/100 | loss=0.3889 | val_MAE=0.4155 | val_RMSE=0.9283 | lr=5.08e-04 | 24.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  53/100 | loss=0.3878 | val_MAE=0.4484 | val_RMSE=0.9335 | lr=4.92e-04 | 24.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  54/100 | loss=0.3844 | val_MAE=0.4127 | val_RMSE=0.9283 | lr=4.75e-04 | 27.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  55/100 | loss=0.3916 | val_MAE=0.4518 | val_RMSE=0.9296 | lr=4.59e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  56/100 | loss=0.3899 | val_MAE=0.4074 | val_RMSE=0.9366 | lr=4.42e-04 | 24.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  57/100 | loss=0.3882 | val_MAE=0.4205 | val_RMSE=0.9327 | lr=4.26e-04 | 24.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  58/100 | loss=0.3826 | val_MAE=0.4250 | val_RMSE=0.9204 | lr=4.10e-04 | 24.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  59/100 | loss=0.3818 | val_MAE=0.4179 | val_RMSE=0.9309 | lr=3.93e-04 | 23.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  60/100 | loss=0.3877 | val_MAE=0.4271 | val_RMSE=0.9177 | lr=3.77e-04 | 23.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_60.pt
+  Epoch  61/100 | loss=0.3817 | val_MAE=0.4365 | val_RMSE=0.9227 | lr=3.61e-04 | 24.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  62/100 | loss=0.3712 | val_MAE=0.4556 | val_RMSE=0.9294 | lr=3.45e-04 | 24.9s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  63/100 | loss=0.3759 | val_MAE=0.4192 | val_RMSE=0.9204 | lr=3.30e-04 | 25.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  64/100 | loss=0.3819 | val_MAE=0.4557 | val_RMSE=0.9324 | lr=3.14e-04 | 24.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  65/100 | loss=0.3785 | val_MAE=0.4132 | val_RMSE=0.9206 | lr=2.99e-04 | 24.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  66/100 | loss=0.3737 | val_MAE=0.4097 | val_RMSE=0.9202 | lr=2.84e-04 | 24.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  67/100 | loss=0.3748 | val_MAE=0.4279 | val_RMSE=0.9223 | lr=2.69e-04 | 23.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  68/100 | loss=0.3733 | val_MAE=0.4149 | val_RMSE=0.9207 | lr=2.55e-04 | 24.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  69/100 | loss=0.3715 | val_MAE=0.4144 | val_RMSE=0.9198 | lr=2.41e-04 | 25.7s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  70/100 | loss=0.3708 | val_MAE=0.4144 | val_RMSE=0.9258 | lr=2.27e-04 | 24.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_70.pt
+  Epoch  71/100 | loss=0.3695 | val_MAE=0.4012 | val_RMSE=0.9212 | lr=2.13e-04 | 25.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/best.pt
+  Epoch  72/100 | loss=0.3701 | val_MAE=0.4251 | val_RMSE=0.9254 | lr=1.99e-04 | 25.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  73/100 | loss=0.3717 | val_MAE=0.4060 | val_RMSE=0.9195 | lr=1.86e-04 | 24.0s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  74/100 | loss=0.3690 | val_MAE=0.4069 | val_RMSE=0.9205 | lr=1.74e-04 | 23.6s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  75/100 | loss=0.3625 | val_MAE=0.4171 | val_RMSE=0.9228 | lr=1.61e-04 | 24.2s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  76/100 | loss=0.3708 | val_MAE=0.4107 | val_RMSE=0.9233 | lr=1.49e-04 | 24.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  77/100 | loss=0.3650 | val_MAE=0.4164 | val_RMSE=0.9240 | lr=1.38e-04 | 24.4s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  78/100 | loss=0.3681 | val_MAE=0.4098 | val_RMSE=0.9218 | lr=1.27e-04 | 25.0s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  79/100 | loss=0.3673 | val_MAE=0.4153 | val_RMSE=0.9223 | lr=1.16e-04 | 25.0s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  80/100 | loss=0.3670 | val_MAE=0.4066 | val_RMSE=0.9213 | lr=1.05e-04 | 25.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  [checkpoint] saved checkpoints/Economy_Unemp/epoch_80.pt
+  Epoch  81/100 | loss=0.3651 | val_MAE=0.4096 | val_RMSE=0.9207 | lr=9.55e-05 | 24.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  82/100 | loss=0.3640 | val_MAE=0.4051 | val_RMSE=0.9206 | lr=8.60e-05 | 23.8s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  83/100 | loss=0.3661 | val_MAE=0.4059 | val_RMSE=0.9211 | lr=7.70e-05 | 23.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  84/100 | loss=0.3665 | val_MAE=0.4060 | val_RMSE=0.9229 | lr=6.84e-05 | 23.5s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  85/100 | loss=0.3650 | val_MAE=0.4053 | val_RMSE=0.9218 | lr=6.03e-05 | 24.3s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Epoch  86/100 | loss=0.3632 | val_MAE=0.4064 | val_RMSE=0.9214 | lr=5.26e-05 | 24.1s
+  [checkpoint] saved checkpoints/Economy_Unemp/latest.pt
+  Early stopping at epoch 86 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=0.4012)
+
+  Final test metrics:
+    MAE: 0.4012
+    MSE: 0.8486
+    RMSE: 0.9212
+    WAPE: 36.5567
+    MAPE: 114.3537
+    sMAPE: 50.9965
+    R2: 0.5240
+
+  Metrics written to results/Economy_Unemp/metrics.json
+  Total training time: 2147.6s  (35.8 min)

@@ -1,0 +1,158 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:344: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Climate_AQI
+  NYC air-quality index (PM2.5) — Climate domain
+  frequency=daily  lookback=96  horizon=96
+==============================================================================
+  [M1] early_stopping_patience overridden to 30
+  [M2] warmup_iters override set to 50 (applied after data loaders)
+  [M4] normalization overridden to minmax
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 7552 samples
+  Val  : 2112 samples
+  Test : 2112 samples
+  Normalize: mean=26.0, std=250.0
+  Parameters: total=3,900,532  trainable=1,091,956 (28.00%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 50 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=50 iters, num_epochs=100, num_batches_per_epoch=944, total=94400 iters, warmdown=off)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=30)
+  Batch size: 8  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:175: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   1/100 | loss=0.1898 | val_MAE=0.1100 | val_RMSE=0.1366 | lr=1.00e-03 | 625.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt
+  Epoch   2/100 | loss=0.1316 | val_MAE=0.0964 | val_RMSE=0.1350 | lr=9.99e-04 | 645.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt
+  Epoch   3/100 | loss=0.1231 | val_MAE=0.1092 | val_RMSE=0.1398 | lr=9.98e-04 | 643.0s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   4/100 | loss=0.1190 | val_MAE=0.1042 | val_RMSE=0.1400 | lr=9.96e-04 | 660.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   5/100 | loss=0.1177 | val_MAE=0.1008 | val_RMSE=0.1340 | lr=9.94e-04 | 617.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   6/100 | loss=0.1166 | val_MAE=0.1037 | val_RMSE=0.1336 | lr=9.91e-04 | 609.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   7/100 | loss=0.1159 | val_MAE=0.0976 | val_RMSE=0.1344 | lr=9.88e-04 | 606.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   8/100 | loss=0.1152 | val_MAE=0.1026 | val_RMSE=0.1365 | lr=9.84e-04 | 610.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch   9/100 | loss=0.1148 | val_MAE=0.1028 | val_RMSE=0.1340 | lr=9.80e-04 | 608.1s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  10/100 | loss=0.1142 | val_MAE=0.1049 | val_RMSE=0.1372 | lr=9.76e-04 | 613.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/epoch_10.pt
+  Epoch  11/100 | loss=0.1138 | val_MAE=0.1034 | val_RMSE=0.1350 | lr=9.71e-04 | 624.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  12/100 | loss=0.1132 | val_MAE=0.1017 | val_RMSE=0.1342 | lr=9.65e-04 | 610.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  13/100 | loss=0.1130 | val_MAE=0.1015 | val_RMSE=0.1343 | lr=9.59e-04 | 635.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  14/100 | loss=0.1125 | val_MAE=0.0962 | val_RMSE=0.1297 | lr=9.53e-04 | 611.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt
+  Epoch  15/100 | loss=0.1124 | val_MAE=0.0975 | val_RMSE=0.1313 | lr=9.46e-04 | 602.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  16/100 | loss=0.1120 | val_MAE=0.1026 | val_RMSE=0.1370 | lr=9.38e-04 | 674.0s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  17/100 | loss=0.1120 | val_MAE=0.0989 | val_RMSE=0.1320 | lr=9.31e-04 | 605.0s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  18/100 | loss=0.1117 | val_MAE=0.0984 | val_RMSE=0.1313 | lr=9.23e-04 | 617.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  19/100 | loss=0.1115 | val_MAE=0.1055 | val_RMSE=0.1407 | lr=9.14e-04 | 612.2s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  20/100 | loss=0.1116 | val_MAE=0.1004 | val_RMSE=0.1326 | lr=9.05e-04 | 619.6s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/epoch_20.pt
+  Epoch  21/100 | loss=0.1114 | val_MAE=0.1003 | val_RMSE=0.1335 | lr=8.95e-04 | 605.3s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  22/100 | loss=0.1114 | val_MAE=0.0995 | val_RMSE=0.1329 | lr=8.86e-04 | 608.1s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  23/100 | loss=0.1111 | val_MAE=0.1066 | val_RMSE=0.1418 | lr=8.75e-04 | 588.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  24/100 | loss=0.1112 | val_MAE=0.1015 | val_RMSE=0.1339 | lr=8.65e-04 | 598.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  25/100 | loss=0.1109 | val_MAE=0.1035 | val_RMSE=0.1369 | lr=8.54e-04 | 611.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  26/100 | loss=0.1110 | val_MAE=0.1003 | val_RMSE=0.1333 | lr=8.43e-04 | 609.3s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  27/100 | loss=0.1109 | val_MAE=0.1000 | val_RMSE=0.1333 | lr=8.31e-04 | 610.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  28/100 | loss=0.1108 | val_MAE=0.1011 | val_RMSE=0.1336 | lr=8.19e-04 | 611.5s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  29/100 | loss=0.1107 | val_MAE=0.1008 | val_RMSE=0.1351 | lr=8.07e-04 | 606.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  30/100 | loss=0.1106 | val_MAE=0.1011 | val_RMSE=0.1346 | lr=7.94e-04 | 600.3s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/epoch_30.pt
+  Epoch  31/100 | loss=0.1106 | val_MAE=0.1038 | val_RMSE=0.1380 | lr=7.82e-04 | 597.7s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  32/100 | loss=0.1103 | val_MAE=0.1005 | val_RMSE=0.1351 | lr=7.68e-04 | 586.6s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  33/100 | loss=0.1104 | val_MAE=0.1006 | val_RMSE=0.1360 | lr=7.55e-04 | 594.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  34/100 | loss=0.1104 | val_MAE=0.0987 | val_RMSE=0.1327 | lr=7.41e-04 | 587.7s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  35/100 | loss=0.1103 | val_MAE=0.1030 | val_RMSE=0.1370 | lr=7.27e-04 | 613.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  36/100 | loss=0.1101 | val_MAE=0.1000 | val_RMSE=0.1332 | lr=7.13e-04 | 607.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  37/100 | loss=0.1102 | val_MAE=0.0985 | val_RMSE=0.1328 | lr=6.99e-04 | 595.2s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  38/100 | loss=0.1102 | val_MAE=0.1010 | val_RMSE=0.1334 | lr=6.85e-04 | 588.9s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  39/100 | loss=0.1100 | val_MAE=0.1015 | val_RMSE=0.1353 | lr=6.70e-04 | 598.4s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  40/100 | loss=0.1099 | val_MAE=0.0969 | val_RMSE=0.1310 | lr=6.55e-04 | 596.8s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/epoch_40.pt
+  Epoch  41/100 | loss=0.1098 | val_MAE=0.1047 | val_RMSE=0.1391 | lr=6.40e-04 | 617.2s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  42/100 | loss=0.1097 | val_MAE=0.0992 | val_RMSE=0.1346 | lr=6.25e-04 | 606.6s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  43/100 | loss=0.1097 | val_MAE=0.1035 | val_RMSE=0.1369 | lr=6.10e-04 | 605.6s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Epoch  44/100 | loss=0.1097 | val_MAE=0.1009 | val_RMSE=0.1351 | lr=5.94e-04 | 600.0s
+  [checkpoint] saved /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/latest.pt
+  Early stopping at epoch 44 (no improvement for 30 epochs)
+  Loaded best checkpoint (val_MAE=0.0962)
+
+  Final test metrics:
+    MAE: 0.0962
+    MSE: 0.0168
+    RMSE: 0.1297
+    WAPE: 53.2031
+    MAPE: 96.2197
+    sMAPE: 50.8850
+    R2: -0.1022
+
+  Metrics written to /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json
+  Total training time: 26916.3s  (448.6 min)

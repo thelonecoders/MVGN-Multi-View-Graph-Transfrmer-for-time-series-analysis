@@ -1,0 +1,47 @@
+{
+  "domain": "Energy_Gas",
+  "config": "us_gasolineprice_week_predLen_24",
+  "frequency": "weekly",
+  "variables": 1,
+  "description": "US gasoline retail price \u2014 Energy domain, 24-week horizon",
+  "text_coverage": "real EIA text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Energy_Gas/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_gasolineprice_week_predLen_24/train.jsonl",
+      "status": "OK",
+      "bytes": 10696500,
+      "expected_bytes": null,
+      "sha256": "0254cb5f48d00cdabace17f17fca24af8390e332d784788fe4feb332c0140c3c",
+      "lfs_oid": null,
+      "records": 960
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Energy_Gas/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_gasolineprice_week_predLen_24/validation.jsonl",
+      "status": "OK",
+      "bytes": 2776860,
+      "expected_bytes": null,
+      "sha256": "df4b9b245bf4383d99231e5c2b4c26e88ac0295ae2eba7154fbcca10cb59aa39",
+      "lfs_oid": null,
+      "records": 256
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Energy_Gas/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/us_gasolineprice_week_predLen_24/test.jsonl",
+      "status": "OK",
+      "bytes": 2980124,
+      "expected_bytes": null,
+      "sha256": "9c8063edf17cfd039fe5e9f8ce0d2922b8eaf0d0b1b9b51aedc5e78025da7853",
+      "lfs_oid": null,
+      "records": 256
+    }
+  ],
+  "total_bytes": 16453484
+}

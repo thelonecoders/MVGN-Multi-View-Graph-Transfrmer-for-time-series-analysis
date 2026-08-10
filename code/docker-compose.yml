@@ -1,0 +1,53 @@
+# docker-compose.yml for MVGT-Net training
+# Usage:
+#   docker compose build        # build the image (one-time, ~10 min)
+#   docker compose run train    # interactive training session
+#   docker compose run tests    # run smoke tests
+#   docker compose run eval     # run evaluation on a trained checkpoint
+
+services:
+  train:
+    build: .
+    image: mvgtnet:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - WANDB_API_KEY=${WANDB_API_KEY:-}
+      - WANDB_PROJECT=mvgtnet-timemmd
+      - WANDB_MODE=${WANDB_MODE:-offline}
+    volumes:
+      - ./data:/workspace/mvgt_net/data:ro
+      - ./checkpoints:/workspace/mvgt_net/checkpoints
+      - ./logs:/workspace/mvgt_net/logs
+    shm_size: 16gb
+    command: >
+      python scripts/train.py
+      --config configs/default.yaml
+      --domain ${DOMAIN:-Environment}
+      --horizon ${HORIZON:-12}
+      --seed ${SEED:-42}
+      --epochs ${EPOCHS:-500}
+      --wandb
+
+  tests:
+    build: .
+    image: mvgtnet:latest
+    command: python -m pytest tests/test_smoke.py -v
+
+  eval:
+    build: .
+    image: mvgtnet:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./data:/workspace/mvgt_net/data:ro
+      - ./checkpoints:/workspace/mvgt_net/checkpoints:ro
+      - ./results:/workspace/mvgt_net/results
+    command: >
+      python scripts/evaluate.py
+      --checkpoint ${CHECKPOINT:-checkpoints/best.pt}
+      --domain ${DOMAIN:-Environment}
+      --horizon ${HORIZON:-12}
+      --conformal-alpha ${ALPHA:-0.1}

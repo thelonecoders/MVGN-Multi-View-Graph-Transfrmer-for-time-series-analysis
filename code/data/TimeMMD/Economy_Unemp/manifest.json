@@ -1,0 +1,47 @@
+{
+  "domain": "Economy_Unemp",
+  "config": "unadj_unemploymentrate_all_processed_predLen_12",
+  "frequency": "monthly",
+  "variables": 1,
+  "description": "US unadjusted unemployment rate \u2014 Economy domain, 12-month horizon",
+  "text_coverage": "real BLS text facts per record",
+  "source_repo": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC",
+  "upstream_repo": "https://github.com/AdityaLab/TimeMMD",
+  "license": "ODC-By v1.0",
+  "files": [
+    {
+      "split": "train",
+      "path": "TimeMMD/Economy_Unemp/train.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/unadj_unemploymentrate_all_processed_predLen_12/train.jsonl",
+      "status": "OK",
+      "bytes": 1950765,
+      "expected_bytes": null,
+      "sha256": "c393e36e82a226b1269182d7228652fa3a3ff992d1e3a2410ce4cfde0eff3273",
+      "lfs_oid": null,
+      "records": 608
+    },
+    {
+      "split": "validation",
+      "path": "TimeMMD/Economy_Unemp/validation.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/unadj_unemploymentrate_all_processed_predLen_12/validation.jsonl",
+      "status": "OK",
+      "bytes": 868070,
+      "expected_bytes": null,
+      "sha256": "fcba71b6e414d3046d06fe8f0324b928454b2d8dd21cd4f714287e899e12e397",
+      "lfs_oid": null,
+      "records": 160
+    },
+    {
+      "split": "test",
+      "path": "TimeMMD/Economy_Unemp/test.jsonl",
+      "url": "https://huggingface.co/datasets/AndrewRWilliams/time-mmd-DC/resolve/main/data/unadj_unemploymentrate_all_processed_predLen_12/test.jsonl",
+      "status": "OK",
+      "bytes": 901030,
+      "expected_bytes": null,
+      "sha256": "9d1093c8fbbe2b76ab0f6ebb5a1b5da06a799f6d0958f9e832b195e5855e7507",
+      "lfs_oid": null,
+      "records": 160
+    }
+  ],
+  "total_bytes": 3719865
+}

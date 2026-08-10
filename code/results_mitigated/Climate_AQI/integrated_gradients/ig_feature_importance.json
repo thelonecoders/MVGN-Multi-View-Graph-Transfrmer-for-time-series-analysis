@@ -1,0 +1,38 @@
+{
+  "method": "IntegratedGradients",
+  "library": "captum",
+  "n_samples": 10,
+  "input_shape": [
+    96,
+    1,
+    1
+  ],
+  "n_steps": 64,
+  "elapsed_seconds": 0.8278163130016765,
+  "per_feature_importance": [
+    {
+      "feature_index": 0,
+      "mean_abs_attribution": 0.0011551721254363656
+    }
+  ],
+  "top_5_features": [
+    {
+      "feature_index": 0,
+      "mean_abs_attribution": 0.0011551721254363656
+    }
+  ],
+  "per_node_importance": [
+    {
+      "node_index": 0,
+      "mean_abs_attribution": 0.0011551721254363656
+    }
+  ],
+  "per_timestep_importance_peak_idx": 95,
+  "per_timestep_importance_peak_value": 0.005349157378077507,
+  "baseline_strategy": "zeros",
+  "data_source": "real_timemmd_test_split",
+  "checkpoint_path": "/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/checkpoints_mitigated/Climate_AQI/best.pt",
+  "metrics_path": "/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/results_mitigated/Climate_AQI/metrics.json",
+  "device": "cuda",
+  "timestamp_utc": "2026-08-10T12:49:28Z"
+}

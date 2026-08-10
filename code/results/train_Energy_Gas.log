@@ -1,0 +1,173 @@
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:320: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+
+==============================================================================
+  TRAINING: Energy_Gas
+  US gasoline retail price — Energy domain
+  frequency=weekly  lookback=36  horizon=24
+==============================================================================
+  Device: cuda
+  GPU: NVIDIA GeForce RTX 3080 Ti  (12.5 GB)
+  Data root: /home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/data/TimeMMD
+  Train: 960 samples
+  Val  : 256 samples
+  Test : 256 samples
+  Normalize: mean=2.2794065475463867, std=0.9486039280891418
+  Parameters: total=3,882,796  trainable=1,074,220 (27.67%)  frozen=2,808,576
+Ranger21 optimizer ready with following settings:
+
+Core optimizer = AdamW
+Learning rate of 0.001
+
+Important - num_epochs of training = ** 100 epochs **
+please confirm this is correct or warmup and warmdown will be off
+
+Warm-up: linear warmup, over 150 iterations
+
+Lookahead active, merging every 5 steps, with blend factor of 0.5
+Norm Loss active, factor = 0.0001
+Gradient Centralization = On
+
+Adaptive Gradient Clipping = True
+	clipping value of 0.01
+	steps for clipping = 0.001
+  Optimizer: Ranger21 (lr=0.001, wd=0.0, warmup=150 iters, total=3000 iters)
+  Mixed precision (fp16): True
+
+  Training for 100 epochs (early stopping patience=15)
+  Batch size: 32  LR: 0.001  Grad clip: 1.0
+/home/ubuntu/st-llm-plus/ST-LLM-Plus_VPS_Code_Bundle/code/scripts/train_real.py:162: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+params size saved
+total param groups = 1
+total params in groups = 152
+  Epoch   1/100 | loss=0.9138 | val_MAE=0.9352 | val_RMSE=1.1608 | lr=2.00e-04 | 77.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch   2/100 | loss=0.8081 | val_MAE=0.7341 | val_RMSE=0.9179 | lr=4.00e-04 | 75.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch   3/100 | loss=0.4988 | val_MAE=0.5026 | val_RMSE=0.6413 | lr=6.00e-04 | 74.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch   4/100 | loss=0.3901 | val_MAE=0.4913 | val_RMSE=0.6272 | lr=8.00e-04 | 74.6s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch   5/100 | loss=0.4303 | val_MAE=0.4730 | val_RMSE=0.6025 | lr=1.00e-03 | 76.8s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+
+** Ranger21 update = Warmup complete - lr set to 0.001
+
+  Epoch   6/100 | loss=0.4315 | val_MAE=0.5081 | val_RMSE=0.6396 | lr=1.00e-03 | 73.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch   7/100 | loss=0.3831 | val_MAE=0.4181 | val_RMSE=0.5477 | lr=9.99e-04 | 73.0s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch   8/100 | loss=0.3644 | val_MAE=0.4687 | val_RMSE=0.5989 | lr=9.98e-04 | 73.8s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch   9/100 | loss=0.3545 | val_MAE=0.4122 | val_RMSE=0.5409 | lr=9.96e-04 | 76.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  10/100 | loss=0.3463 | val_MAE=0.4178 | val_RMSE=0.5423 | lr=9.93e-04 | 77.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/epoch_10.pt
+  Epoch  11/100 | loss=0.3257 | val_MAE=0.3898 | val_RMSE=0.5156 | lr=9.90e-04 | 82.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  12/100 | loss=0.3306 | val_MAE=0.3776 | val_RMSE=0.5047 | lr=9.87e-04 | 81.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  13/100 | loss=0.3662 | val_MAE=0.3832 | val_RMSE=0.5114 | lr=9.83e-04 | 74.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  14/100 | loss=0.3318 | val_MAE=0.3734 | val_RMSE=0.4938 | lr=9.78e-04 | 73.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  15/100 | loss=0.3127 | val_MAE=0.3862 | val_RMSE=0.5121 | lr=9.73e-04 | 74.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  16/100 | loss=0.3132 | val_MAE=0.3725 | val_RMSE=0.4845 | lr=9.67e-04 | 87.6s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  17/100 | loss=0.3035 | val_MAE=0.3806 | val_RMSE=0.4992 | lr=9.61e-04 | 73.4s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  18/100 | loss=0.3020 | val_MAE=0.3781 | val_RMSE=0.4927 | lr=9.55e-04 | 75.4s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  19/100 | loss=0.2963 | val_MAE=0.3892 | val_RMSE=0.5122 | lr=9.47e-04 | 82.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  20/100 | loss=0.2857 | val_MAE=0.3685 | val_RMSE=0.4820 | lr=9.40e-04 | 73.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  [checkpoint] saved checkpoints/Energy_Gas/epoch_20.pt
+  Epoch  21/100 | loss=0.2857 | val_MAE=0.3864 | val_RMSE=0.5030 | lr=9.32e-04 | 80.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  22/100 | loss=0.2923 | val_MAE=0.3971 | val_RMSE=0.5093 | lr=9.23e-04 | 74.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  23/100 | loss=0.2901 | val_MAE=0.3885 | val_RMSE=0.5005 | lr=9.14e-04 | 82.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  24/100 | loss=0.2729 | val_MAE=0.3862 | val_RMSE=0.4953 | lr=9.05e-04 | 75.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  25/100 | loss=0.2682 | val_MAE=0.3780 | val_RMSE=0.4991 | lr=8.95e-04 | 73.8s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  26/100 | loss=0.2696 | val_MAE=0.3954 | val_RMSE=0.5156 | lr=8.84e-04 | 73.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  27/100 | loss=0.2728 | val_MAE=0.4041 | val_RMSE=0.5211 | lr=8.73e-04 | 73.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  28/100 | loss=0.2638 | val_MAE=0.4019 | val_RMSE=0.5181 | lr=8.62e-04 | 82.6s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  29/100 | loss=0.2605 | val_MAE=0.3917 | val_RMSE=0.5031 | lr=8.51e-04 | 75.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  30/100 | loss=0.2484 | val_MAE=0.3687 | val_RMSE=0.4826 | lr=8.39e-04 | 74.0s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/epoch_30.pt
+  Epoch  31/100 | loss=0.2483 | val_MAE=0.3864 | val_RMSE=0.4959 | lr=8.26e-04 | 96.5s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  32/100 | loss=0.2444 | val_MAE=0.3931 | val_RMSE=0.5034 | lr=8.14e-04 | 82.4s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  33/100 | loss=0.2444 | val_MAE=0.3595 | val_RMSE=0.4713 | lr=8.01e-04 | 77.6s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/best.pt
+  Epoch  34/100 | loss=0.2488 | val_MAE=0.3794 | val_RMSE=0.4934 | lr=7.87e-04 | 75.8s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  35/100 | loss=0.2494 | val_MAE=0.3860 | val_RMSE=0.5000 | lr=7.73e-04 | 79.4s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  36/100 | loss=0.2439 | val_MAE=0.3772 | val_RMSE=0.4900 | lr=7.59e-04 | 74.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  37/100 | loss=0.2339 | val_MAE=0.3756 | val_RMSE=0.4901 | lr=7.45e-04 | 73.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  38/100 | loss=0.2317 | val_MAE=0.3742 | val_RMSE=0.4882 | lr=7.31e-04 | 77.7s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  39/100 | loss=0.2311 | val_MAE=0.3768 | val_RMSE=0.4891 | lr=7.16e-04 | 95.5s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  40/100 | loss=0.2248 | val_MAE=0.3777 | val_RMSE=0.4913 | lr=7.01e-04 | 76.2s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  [checkpoint] saved checkpoints/Energy_Gas/epoch_40.pt
+  Epoch  41/100 | loss=0.2269 | val_MAE=0.3802 | val_RMSE=0.4979 | lr=6.86e-04 | 73.4s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  42/100 | loss=0.2241 | val_MAE=0.3768 | val_RMSE=0.4939 | lr=6.70e-04 | 73.9s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  43/100 | loss=0.2145 | val_MAE=0.3767 | val_RMSE=0.4947 | lr=6.55e-04 | 73.1s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  44/100 | loss=0.2142 | val_MAE=0.3855 | val_RMSE=0.5008 | lr=6.39e-04 | 72.7s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  45/100 | loss=0.2161 | val_MAE=0.3806 | val_RMSE=0.4959 | lr=6.23e-04 | 82.6s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  46/100 | loss=0.2075 | val_MAE=0.3845 | val_RMSE=0.5026 | lr=6.07e-04 | 73.3s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  47/100 | loss=0.2085 | val_MAE=0.3995 | val_RMSE=0.5159 | lr=5.90e-04 | 79.7s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Epoch  48/100 | loss=0.2050 | val_MAE=0.4180 | val_RMSE=0.5363 | lr=5.74e-04 | 74.5s
+  [checkpoint] saved checkpoints/Energy_Gas/latest.pt
+  Early stopping at epoch 48 (no improvement for 15 epochs)
+  Loaded best checkpoint (val_MAE=0.3595)
+
+  Final test metrics:
+    MAE: 0.3595
+    MSE: 0.2221
+    RMSE: 0.4713
+    WAPE: 38.8520
+    MAPE: 285.2596
+    sMAPE: 62.7325
+    R2: 0.6077
+
+  Metrics written to results/Energy_Gas/metrics.json
+  Total training time: 3718.5s  (62.0 min)

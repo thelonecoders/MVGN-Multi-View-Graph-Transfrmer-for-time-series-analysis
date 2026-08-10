@@ -1,0 +1,21 @@
+{
+  "domain": "Climate_AQI",
+  "checkpoint_epoch": 14,
+  "test_r2": -0.1022,
+  "test_mae": 0.0962,
+  "n_samples_explained": 10,
+  "n_input_features": 12,
+  "n_output_timesteps": 96,
+  "key_findings": {
+    "most_influential_input_week": "Week 12 (days 88-95)",
+    "recency_concentration_ratio": 2.6345156261187204,
+    "interpretation": "Model concentrates attention on most recent week(s) of input history.",
+    "forecast_horizon_pattern": "see output_timestep_importance.png for forecast sensitivity curve"
+  },
+  "files_generated": [
+    "Climate_AQI_feature_importance.json",
+    "Climate_AQI_shap_bar.png",
+    "Climate_AQI_output_timestep_importance.png",
+    "Climate_AQI_shap_heatmap.png"
+  ]
+}
