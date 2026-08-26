@@ -519,8 +519,7 @@ in code docstrings and not hidden:
    requires 12 baseline implementations (Transformer, Reformer, Informer,
    Autoformer, Crossformer, Non-stationary Transformer, FEDformer,
    iTransformer, DLinear, FiLM, TimesNet, PatchTST). These baselines are
-   NOT included in this bundle — they live in the upstream ST-LLM+ codebase
-   at `https://github.com/ST-LLM/ST-LLM`. The `run_all_experiments.py`
+   NOT included in this bundle. The `run_all_experiments.py`
    script will print "[FAIL]" for each missing baseline. To run the full
    Chapter 18 protocol, clone the ST-LLM+ repo and place it alongside
    this bundle.
